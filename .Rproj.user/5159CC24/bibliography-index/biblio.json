@@ -1,295 +1,32 @@
 {
     "sources": [
         {
-            "URL": "https://earth.esa.int/eogateway/missions/landsat",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        1,
-                        18
-                    ]
-                ]
-            },
+            "DOI": "10.1093/comjnl/27.2.97",
+            "ISSN": "0010-4620",
+            "URL": "https://doi.org/10.1093/comjnl/27.2.97",
             "author": [
                 {
-                    "literal": "ESA"
+                    "family": "Knuth",
+                    "given": "Donald E."
                 }
             ],
-            "id": "ESAn/d",
-            "issued": {
-                "date-parts": []
-            },
-            "title": "Landsat Series - Earth Online",
-            "type": ""
-        },
-        {
-            "DOI": "10.1080/10106049.2014.894586",
-            "ISSN": "1010-6049, 1752-0762",
-            "URL": "http://www.tandfonline.com/doi/abs/10.1080/10106049.2014.894586",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        1,
-                        21
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "family": "Jia",
-                    "given": "Kun"
-                },
-                {
-                    "family": "Wei",
-                    "given": "Xiangqin"
-                },
-                {
-                    "family": "Gu",
-                    "given": "Xingfa"
-                },
-                {
-                    "family": "Yao",
-                    "given": "Yunjun"
-                },
-                {
-                    "family": "Xie",
-                    "given": "Xianhong"
-                },
-                {
-                    "family": "Li",
-                    "given": "Bin"
-                }
-            ],
-            "container-title": "Geocarto International",
-            "id": "Jia2014",
-            "issue": "8",
+            "container-title": "Comput. J.",
+            "id": "knuth84",
+            "issue": "2",
             "issued": {
                 "date-parts": [
                     [
-                        2014,
-                        11
-                    ]
-                ]
-            },
-            "language": "en-US",
-            "page": "941-951",
-            "title": "Land cover classification using Landsat 8 Operational Land Imager data in Beijing, China",
-            "type": "article-journal",
-            "volume": "29"
-        },
-        {
-            "URL": "https://landsat.gsfc.nasa.gov/satellites/landsat-8/",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        1,
-                        18
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "NASA"
-                }
-            ],
-            "id": "NASA2021",
-            "issued": {
-                "date-parts": [
-                    [
-                        2021,
-                        11
-                    ]
-                ]
-            },
-            "language": "en-US",
-            "title": "Landsat 8 | Landsat Science",
-            "type": ""
-        },
-        {
-            "DOI": "10.15623/ijret.2014.0305025",
-            "ISSN": "23217308, 23191163",
-            "URL": "https://ijret.org/volumes/2014v03/i05/IJRET20140305025.pdf",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        1,
-                        21
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "family": "Rajeshwari A",
-                    "given": "Mani N D"
-                }
-            ],
-            "container-title": "International Journal of Research in Engineering and Technology",
-            "id": "RajeshwariA2014",
-            "issue": "05",
-            "issued": {
-                "date-parts": [
-                    [
-                        2014,
+                        1984,
                         5
                     ]
                 ]
             },
-            "language": "en-US",
-            "page": "122-126",
-            "title": "ESTIMATION OF LAND SURFACE TEMPERATURE OF DINDIGUL DISTRICT USING LANDSAT 8 DATA",
+            "page": "97-111",
+            "publisher": "Oxford University Press, Inc.",
+            "publisher-place": "USA",
+            "title": "Literate programming",
             "type": "article-journal",
-            "volume": "03"
-        },
-        {
-            "DOI": "10.14419/ijet.v7i4.35.22858",
-            "ISSN": "2227-524X",
-            "URL": "https://www.sciencepubco.com/index.php/ijet/article/view/22858",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        1,
-                        21
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "family": "Ridwan",
-                    "given": "M. A."
-                },
-                {
-                    "family": "Radzi",
-                    "given": "N. A. M."
-                },
-                {
-                    "family": "Ahmad",
-                    "given": "W. S. H. M. W."
-                },
-                {
-                    "family": "Mustafa",
-                    "given": "I. S."
-                },
-                {
-                    "family": "Din",
-                    "given": "N. M."
-                },
-                {
-                    "family": "Jalil",
-                    "given": "Y. E."
-                },
-                {
-                    "family": "Isa",
-                    "given": "A. M."
-                },
-                {
-                    "family": "Othman",
-                    "given": "N. S."
-                },
-                {
-                    "family": "Zaki",
-                    "given": "W. M. D. W."
-                }
-            ],
-            "container-title": "International Journal of Engineering & Technology",
-            "id": "Ridwan2018",
-            "issue": "4.35",
-            "issued": {
-                "date-parts": [
-                    [
-                        2018,
-                        11
-                    ]
-                ]
-            },
-            "language": "en-US",
-            "page": "436",
-            "title": "Applications of Landsat-8 Data: A Survey",
-            "title-short": "Applications of Landsat-8 Data",
-            "type": "article-journal",
-            "volume": "7"
-        },
-        {
-            "DOI": "10.1016/j.rse.2015.08.032",
-            "ISSN": "00344257",
-            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0034425715301206",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        1,
-                        21
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "family": "Schroeder",
-                    "given": "Wilfrid"
-                },
-                {
-                    "family": "Oliva",
-                    "given": "Patricia"
-                },
-                {
-                    "family": "Giglio",
-                    "given": "Louis"
-                },
-                {
-                    "family": "Quayle",
-                    "given": "Brad"
-                },
-                {
-                    "family": "Lorenz",
-                    "given": "Eckehard"
-                },
-                {
-                    "family": "Morelli",
-                    "given": "Fabiano"
-                }
-            ],
-            "container-title": "Remote Sensing of Environment",
-            "id": "Schroeder2016",
-            "issued": {
-                "date-parts": [
-                    [
-                        2016,
-                        11
-                    ]
-                ]
-            },
-            "language": "en-US",
-            "page": "210-220",
-            "title": "Active fire detection using Landsat-8/OLI data",
-            "type": "article-journal",
-            "volume": "185"
-        },
-        {
-            "URL": "https://www.usgs.gov/media/images/landsat-missions-timeline",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        1,
-                        20
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "USGS"
-                }
-            ],
-            "id": "USGSn/d",
-            "issued": {
-                "date-parts": []
-            },
-            "title": "Landsat Missions Timeline | U.S. Geological Survey",
-            "type": ""
+            "volume": "27"
         }
     ],
     "project_biblios": [
