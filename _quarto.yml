@@ -12,6 +12,7 @@ book:
     - intro.qmd
     - summary.qmd
     - references.qmd
+  reader-mode: true
 
 bibliography: references.bib
 
