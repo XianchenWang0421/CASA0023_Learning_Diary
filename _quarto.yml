@@ -8,12 +8,12 @@ book:
   date: now
   chapters:
     - index.qmd
+    - Week_1.qmd
     - Week_2.qmd
-    - intro.qmd
-    - summary.qmd
     - references.qmd
   reader-mode: true
 
+csl: harvard-cite-them-right.csl
 bibliography: references.bib
 
 format:

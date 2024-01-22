@@ -1,32 +1,28 @@
 {
     "sources": [
         {
-            "DOI": "10.1093/comjnl/27.2.97",
-            "ISSN": "0010-4620",
-            "URL": "https://doi.org/10.1093/comjnl/27.2.97",
+            "ISBN": "013405816X",
+            "abstract": "For junior/graduate-level courses in Remote Sensing in Geography, Geology, Forestry, and Biology. Introductory Digital Image Processing: A Remote Sensing Perspective focuses on digital image processing of aircraft- and satellite-derived, remotely sensed data for Earth resource management applications. Extensively illustrated, it explains how to extract biophysical information from remote sensor data for almost all multidisciplinary land-based environmental projects. Part of the Pearson Series Geographic Information Science. Now in full color, the Fourth Edition provides up-to-date information on analytical methods used to analyze digital remote sensing data. Each chapter contains a substantive reference list that can be used by students and scientists as a starting place for their digital image processing project or research. A new appendix provides sources of imagery and other geospatial information.",
             "author": [
                 {
-                    "family": "Knuth",
-                    "given": "Donald E."
+                    "family": "Jensen",
+                    "given": "John R."
                 }
             ],
-            "container-title": "Comput. J.",
-            "id": "knuth84",
-            "issue": "2",
+            "edition": "4th",
+            "id": "10.5555/2834479",
             "issued": {
                 "date-parts": [
                     [
-                        1984,
-                        5
+                        2015
                     ]
                 ]
             },
-            "page": "97-111",
-            "publisher": "Oxford University Press, Inc.",
+            "publisher": "Prentice Hall Press",
             "publisher-place": "USA",
-            "title": "Literate programming",
-            "type": "article-journal",
-            "volume": "27"
+            "title": "Introductory digital image processing: A remote sensing perspective",
+            "title-short": "Introductory digital image processing",
+            "type": "book"
         }
     ],
     "project_biblios": [

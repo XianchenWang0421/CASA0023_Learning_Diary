@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "CASA0023 Learning Diary",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+    "text": "Introduction\nThis is the learning diary of the CASA0023 (Remotely Sensing Cities and Environments)."
   },
   {
     "objectID": "intro.html",
@@ -25,13 +25,34 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "Jensen, J. R. (2015) Introductory digital image processing: A remote\nsensing perspective. 4th edn. USA: Prentice Hall Press."
   },
   {
     "objectID": "Week_2.html#presentation",
     "href": "Week_2.html#presentation",
-    "title": "\n1  Week 2 Portfolio\n",
-    "section": "\n1.1 Presentation",
-    "text": "1.1 Presentation"
+    "title": "\n2  Week 2 - Portfolio tools: Quarto\n",
+    "section": "\n2.1 Presentation",
+    "text": "2.1 Presentation"
+  },
+  {
+    "objectID": "Week_1.html#summary",
+    "href": "Week_1.html#summary",
+    "title": "1  Week 1 - An Introduction to Remote Sensing",
+    "section": "1.1 Summary",
+    "text": "1.1 Summary\n\n1.1.1 Overview of remote sensing\nRemote sensing is a technology that senses and measures information on the earth’s surface over long distances. It is now frequently used to obtain accurate and timely information, and most remote sensing data are analyzed using digital image processing techniques (Jensen, 2015)."
+  },
+  {
+    "objectID": "Week_1.html#applications",
+    "href": "Week_1.html#applications",
+    "title": "1  Week 1 - An Introduction to Remote Sensing",
+    "section": "1.2 Applications",
+    "text": "1.2 Applications"
+  },
+  {
+    "objectID": "Week_1.html#reflections",
+    "href": "Week_1.html#reflections",
+    "title": "1  Week 1 - An Introduction to Remote Sensing",
+    "section": "1.3 Reflections",
+    "text": "1.3 Reflections\n\n\n\n\nJensen, J. R. (2015) Introductory digital image processing: A remote sensing perspective. 4th ed. USA: Prentice Hall Press."
   }
 ]

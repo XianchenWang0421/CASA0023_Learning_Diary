@@ -1,0 +1,11 @@
+# Week 1 - An Introduction to Remote Sensing
+
+## Summary
+
+### Overview of remote sensing
+
+Remote sensing is a technology that senses and measures information on the earth's surface over long distances. It is now frequently used to obtain accurate and timely information, and most remote sensing data are analyzed using digital image processing techniques [@10.5555/2834479].
+
+## Applications
+
+## Reflections
