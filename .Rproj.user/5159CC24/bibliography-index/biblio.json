@@ -23,6 +23,29 @@
             "title": "Introductory digital image processing: A remote sensing perspective",
             "title-short": "Introductory digital image processing",
             "type": "book"
+        },
+        {
+            "URL": "https://reefresilience.org/management-strategies/remote-sensing-and-mapping/introduction-to-remote-sensing/what-is-remote-sensing/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        2,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "The Nature Conservancy"
+                }
+            ],
+            "id": "TheNatureConservancyn/d",
+            "issued": {
+                "date-parts": []
+            },
+            "title": "What is Remote Sensing?  Reef Resilience",
+            "type": ""
         }
     ],
     "project_biblios": [
