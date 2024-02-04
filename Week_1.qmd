@@ -14,6 +14,130 @@ Remote sensing is a technology that senses and measures information on the earth
 
 ![Difference between passive and active sensors [@TheNatureConservancyn/d]](figure/passive-and-active-sensors.jpg){width="80%"}
 
+### Electromagnetic radiation(EMR) interacts with Earth's surface
+
+Energy can be absorbed and transmitted.
+
+Two forms:
+
+1.  Surface scattering
+
+2.  Atmospheric scattering
+
+### Big issue caused by scattering
+
+#### Problem
+
+Clouds: Impact on remote sensing applications
+
+#### Solution
+
+Synthetic Aperture Radar (SAR)
+
+-   It is an active microwave remote sensing technology
+
+-   It is not limited by weather conditions, cloud cover, or nighttime
+
+-   Valuable for geological exploration, land use monitoring, disaster assessment
+
+#### Conclusion
+
+The sun's energy interacts with the Earth's surface in many ways, affecting the creation and use of data.
+
+### Remote sensing data
+
+#### Data formats
+
+-   Data format: Raster
+
+-   Common data storage format: GeoTIFF
+
+#### Data resolution
+
+1.  Spatial: The size of the raster cells
+
+2.  Spectral: The number of bands, and each band is usually provided as a separate raster layer
+
+3.  Temporal: The revisit time of the sensor
+
+4.  Radiometric: The ability of a sensor to identify and show small differences in energy
+
+### How to select data
+
+-   Environmental constraints
+
+    -   Research area
+
+    -   Research question
+
+    -   research Fund (cost)
+
+    -   ...
+
+-   Sensor constraints
+
+    -   Size of features
+
+    -   Spectral sensitivity
+
+    -   Date range
+
+    -   Quality of the image
+
+    -   Type of orbit
+
+    -   ...
+
+### Practical
+
+#### Use Tasseled Cap transformation for analysis
+
+1.  Tasseled Cap function
+
+$$
+\begin{split}
+Brightness = 0.3037(B2)+0.2793(B3)+\\0.4743(B4)+0.5585(B8)+\\
+0.5082(B11)+0.1863(B12)
+\end{split}
+$$ $$
+\begin{split}
+Greeness = −0.2848(B2)−0.2435(B3)\\−0.5436(B4)+0.7243(B8)+\\
+0.0840(B11)−0.1800(B12)
+\end{split}
+$$ $$
+\begin{split}
+Wetness = 0.1509(B2)+0.1973(B3)\\+0.3279(B4)+0.3406(B8)\\−
+0.7112(B11)−0.4572(B12)
+\end{split}
+$$
+
+2.  Masking and resampling
+
+-   Resample bands 2,3,4 and 8 to 20m
+-   Clip the raster to the City of Capetown polygon
+
+3.  Result
+
+![Tasseled Cap transformation result](figure/Brightness_Greeness_Wetness_2.jpg){width="80%"}
+
+It can be found from the figure:
+
+-   Brightness reflects bare soil, artificial surfaces, bright materials
+-   Greenness reflects green vegetation
+-   Wetness reflects moisture
+
+#### Spectral signatures of POIs
+
+Land cover types of POIs:
+
+-   Bare earth
+-   grass
+-   Forest
+-   Higher reflective urban
+-   Lower reflective urban
+
+![A: Line graph of spectral characteristics B: Density distribution plot of spectral features](figure/spectral_reflectance.jpg){width="80%"}
+
 ## Applications
 
 ## Reflections
