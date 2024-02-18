@@ -1,0 +1,85 @@
+# Week 3 - Remote sensing data
+
+## Summary
+
+### Corrections
+
+#### Geometric correction
+
+Two ways modelling:
+
+1.  Input to output (forward mapping)
+
+2.  Output to input (backward mapping)
+
+We usually use backward mapping, because every value in the output pixel can get a value in the original input image.
+
+#### Atmospheric correction
+
+1.  Dark object subtraction (DOS) or histogram adjustment
+
+2.  Psuedo-invariant Features (PIFs)
+
+3.  Change digital brightness values into scaled surface reflectance.
+
+4.  Empirical line correction
+
+#### Orthorectification correction / topographic correction
+
+-   A subset of georectification
+
+-   Removing distortions
+
+-   Atmospheric correction happens before topographic correction
+
+#### Radiometric calibration
+
+-   Sensors capture image brightness and distributed as a Digital Number (DN, and no units)
+
+-   Radiometric calibration = DN to spectral radiance
+
+#### Analysis ready data (ARD)
+
+Remote sensing data has been corrected (like Landsat data).
+
+### Data joining and enhancement
+
+#### Joining data sets
+
+"Mosaicking" in remote sensing: feather the images together to create a seamless mosaic or image.
+
+#### Image enhancement
+
+-   Contrast enhancement methods (only applied to digital numbers)
+
+    -   Minimum - Maximum
+
+    -   Percentage Linear and Standard Deviation
+
+    -   Piecewise Linear Contrast Stretch
+
+-   Band ratioing methods
+
+    -   NDVI
+
+    -   Tasselled cap
+
+    -   Normalized Burn Ratio
+
+-   Filtering
+
+    -   Low pass filter (averages the surrounding pixels)
+
+    -   High pass filter (enhance local variations)
+
+    -   Edge enhancement (image sharpening)
+
+-   Principal component (dimensionatliy reduction)
+
+-   Texture (spatial variation of gray values)
+
+-   Fusion
+
+## Applications
+
+## Reflections

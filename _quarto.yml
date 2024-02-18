@@ -10,11 +10,12 @@ book:
     - index.qmd
     - Week_1.qmd
     - Week_2.qmd
+    - Week_3.qmd
     - references.qmd
   reader-mode: true
 
 csl: harvard-cite-them-right.csl
-bibliography: references.bib
+bibliography: CASA0023_Learning_Diary.bib
 
 format:
   html:

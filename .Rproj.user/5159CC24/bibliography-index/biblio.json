@@ -1,53 +1,5 @@
 {
-    "sources": [
-        {
-            "ISBN": "013405816X",
-            "abstract": "For junior/graduate-level courses in Remote Sensing in Geography, Geology, Forestry, and Biology. Introductory Digital Image Processing: A Remote Sensing Perspective focuses on digital image processing of aircraft- and satellite-derived, remotely sensed data for Earth resource management applications. Extensively illustrated, it explains how to extract biophysical information from remote sensor data for almost all multidisciplinary land-based environmental projects. Part of the Pearson Series Geographic Information Science. Now in full color, the Fourth Edition provides up-to-date information on analytical methods used to analyze digital remote sensing data. Each chapter contains a substantive reference list that can be used by students and scientists as a starting place for their digital image processing project or research. A new appendix provides sources of imagery and other geospatial information.",
-            "author": [
-                {
-                    "family": "Jensen",
-                    "given": "John R."
-                }
-            ],
-            "edition": "4th",
-            "id": "10.5555/2834479",
-            "issued": {
-                "date-parts": [
-                    [
-                        2015
-                    ]
-                ]
-            },
-            "publisher": "Prentice Hall Press",
-            "publisher-place": "USA",
-            "title": "Introductory digital image processing: A remote sensing perspective",
-            "title-short": "Introductory digital image processing",
-            "type": "book"
-        },
-        {
-            "URL": "https://reefresilience.org/management-strategies/remote-sensing-and-mapping/introduction-to-remote-sensing/what-is-remote-sensing/",
-            "accessed": {
-                "date-parts": [
-                    [
-                        2024,
-                        2,
-                        3
-                    ]
-                ]
-            },
-            "author": [
-                {
-                    "literal": "The Nature Conservancy"
-                }
-            ],
-            "id": "TheNatureConservancyn/d",
-            "issued": {
-                "date-parts": []
-            },
-            "title": "What is Remote Sensing?  Reef Resilience",
-            "type": ""
-        }
-    ],
+    "sources": [],
     "project_biblios": [
         "references.bib"
     ]
