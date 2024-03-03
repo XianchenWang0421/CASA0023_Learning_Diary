@@ -207,6 +207,7 @@ div.csl-indent {
 
 <section id="summary" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
+<p>This section will summarize the content of first week of remote sensing course, which is some basic remote sensing knowledge, including how to obtain remote sensing images, image features, etc. Some key points are listed below.</p>
 <section id="overview-of-remote-sensing" class="level3" data-number="1.1.1">
 <h3 data-number="1.1.1" class="anchored" data-anchor-id="overview-of-remote-sensing"><span class="header-section-number">1.1.1</span> Overview of remote sensing</h3>
 <p>Remote sensing is a technology that senses and measures information on the earth’s surface over long distances. It is now frequently used to obtain accurate and timely information, and most remote sensing data are analyzed using digital image processing techniques <span class="citation" data-cites="Jensen2015">(<a href="references.html#ref-Jensen2015" role="doc-biblioref">Jensen, 2015</a>)</span>.</p>
@@ -357,22 +358,57 @@ Wetness = 0.1509(B2)+0.1973(B3)\\+0.3279(B4)+0.3406(B8)\\−
 <figcaption class="figure-caption">A: Line graph of spectral characteristics B: Density distribution plot of spectral features</figcaption>
 </figure>
 </div>
+<p>It can be seen from the results that different POIs have different performances on different bands, and high urban has a larger difference than other POIs. Specific areas can be detected or classified through differences in band values in different areas, or by combining the values of several bands.</p>
 </section>
 </section>
 </section>
 <section id="applications" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">1.2</span> Applications</h2>
+<p>In the first week of study, I am most interested in Tasseled Cap transformation (TCT). It converts spectral information in remote sensing images into brightness, greenness, and wetness components, which can be applied in many fields.</p>
+<p>Specifically, TCT can help extract water bodies by obtaining the greenness and wetness components of remote sensing images, and can reduce the impact of shadows, dense vegetation and buildings <span class="citation" data-cites="Chen2020 Chen2022 Zhuang2018">(<a href="references.html#ref-Zhuang2018" role="doc-biblioref">Zhuang and Chen, 2018</a>; <a href="references.html#ref-Chen2020" role="doc-biblioref">Chen <em>et al.</em>, 2020</a>, <a href="references.html#ref-Chen2022" role="doc-biblioref">2022</a>)</span>. By considering the characteristics of coastline morphology and the greenness and wetness components, the TCT can also be used to extract coastline information, particularly in areas with high sediment concentration <span class="citation" data-cites="Chen2019">(<a href="references.html#ref-Chen2019" role="doc-biblioref">Chen <em>et al.</em>, 2019</a>)</span>.One study <span class="citation" data-cites="Wang2003">(<a href="references.html#ref-Wang2003" role="doc-biblioref">Wang and Zhu, 2003</a>)</span> compared the TCT method with a Learning Vector Quantization (LVQ) neural network and a conventional rule-based method for water body extraction from Landsat 4 satellite images. It was found that the error of thresholding on the wetness in the TCT method is too large to be practical for this purpose. This suggests that while TCT can be useful for various remote sensing applications, its effectiveness for water body extraction may be limited under certain conditions or compared to other specialized methods.</p>
+<p>Components of TCT, such as brightness, greenness, and wetness, can provide valuable information about the condition and changes in forest vegetation over time <span class="citation" data-cites="Stoyanov2022 Liu2019 Liu2019a">(<a href="references.html#ref-Liu2019" role="doc-biblioref">Liu, 2019b</a>, <a href="references.html#ref-Liu2019a" role="doc-biblioref">2019a</a>; <a href="references.html#ref-Stoyanov2022" role="doc-biblioref">Stoyanov, 2022</a>)</span>, also monitor the health of the forest <span class="citation" data-cites="Liu2009">(<a href="references.html#ref-Liu2009" role="doc-biblioref">Liu and Liu, 2009</a>)</span>. But the TCT parameters need to be recalculated for different sensors or spectral data, enabling more accurate classification of vegetation patches, crop types, and changes in forest health. Moreover, an innovative approach involved modeling post-fire forest regrowth using TCT-derived indicators <span class="citation" data-cites="Stankova2023">(<a href="references.html#ref-Stankova2023" role="doc-biblioref">Stankova and Avetisyan, 2023</a>)</span>. This methodology leverages the TCT to increase the identification of components (soil, vegetation, and moisture) changing during a fire, thereby providing a cost-effective tool for monitoring the recovery of burnt forests.</p>
 </section>
 <section id="reflections" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">1.3</span> Reflections</h2>
+<p>Overall, the first week was heavy and covered many basic concepts of remote sensing data, but it was not difficult in terms of understanding. These basics were important to me as a beginner in remote sensing because it gave me a clear understanding of the sources and structure of remotely sensed data and laid the foundation for subsequent courses. Although I was a bit overwhelmed when I first came across SNAP as a software, with a little bit of research on remote sensing data, I successfully used SNAP to get satisfactory analysis results. In addition, thanks to the emergence of packages such as stars and terra, it is easier and faster to analyse a large amount of remote sensing data in a unified way using R language, and the results can be presented in a more beautiful way. Therefore, for me personally, I prefer to use R for analyses.</p>
 
 
 <div id="refs" class="references csl-bib-body" role="list" style="display: none">
+<div id="ref-Chen2019" class="csl-entry" role="listitem">
+Chen, C. <em>et al.</em> (2019) <span>“Coastline information extraction based on the tasseled cap transformation of <span>Landsat-8 OLI</span> images,”</span> <em>Estuarine, Coastal and Shelf Science</em>, 217, pp. 281–291. doi: <a href="https://doi.org/10.1016/j.ecss.2018.10.021">10.1016/j.ecss.2018.10.021</a>.
+</div>
+<div id="ref-Chen2020" class="csl-entry" role="listitem">
+Chen, C. <em>et al.</em> (2020) <span>“The method for water body information extraction in complex environment using <span>GF-1 WFV</span> images,”</span> <em>E3S Web of Conferences</em>, 213, p. 03024. doi: <a href="https://doi.org/10.1051/e3sconf/202021303024">10.1051/e3sconf/202021303024</a>.
+</div>
+<div id="ref-Chen2022" class="csl-entry" role="listitem">
+Chen, C. <em>et al.</em> (2022) <span>“Extraction of <span>Water Body Information</span> from <span>Remote Sensing Imagery While Considering Greenness</span> and <span>Wetness Based</span> on <span>Tasseled Cap Transformation</span>,”</span> <em>Remote Sensing</em>, 14(13), p. 3001. doi: <a href="https://doi.org/10.3390/rs14133001">10.3390/rs14133001</a>.
+</div>
 <div id="ref-Jensen2015" class="csl-entry" role="listitem">
 Jensen, J. R. (2015) <em>Introductory <span>Digital Image Processing</span>: <span>A Remote Sensing Perspective</span></em>. 4th ed. <span>USA</span>: <span>Prentice Hall Press</span>.
 </div>
+<div id="ref-Liu2019a" class="csl-entry" role="listitem">
+Liu, Q. (2019a) <span>“A tasseled cap transformation for <span>CBERS-04</span> fusion multispectral images,”</span> in <em>Eleventh <span>International Conference</span> on <span>Digital Image Processing</span> (<span>ICDIP</span> 2019)</em>. <span>SPIE</span>, pp. 730–736. doi: <a href="https://doi.org/10.1117/12.2539649">10.1117/12.2539649</a>.
+</div>
+<div id="ref-Liu2019" class="csl-entry" role="listitem">
+Liu, Q. (2019b) <span>“A <span>Tasseled Cap Transformation</span> for <span>GF-2 Fused Multispectral Images</span>,”</span> in <em>2019 12th <span>International Congress</span> on <span>Image</span> and <span>Signal Processing</span>, <span>BioMedical Engineering</span> and <span>Informatics</span> (<span>CISP-BMEI</span>)</em>, pp. 1–5. doi: <a href="https://doi.org/10.1109/CISP-BMEI48845.2019.8966053">10.1109/CISP-BMEI48845.2019.8966053</a>.
+</div>
+<div id="ref-Liu2009" class="csl-entry" role="listitem">
+Liu, Q. and Liu, G. (2009) <span>“Using <span>Tasseled Cap Transformation</span> of <span>CBERS-02 Images</span> to <span>Detect Dieback</span> or <span>Dead Robinia Pseudoacacia Plantation</span>,”</span> in <em>2009 2nd <span>International Congress</span> on <span>Image</span> and <span>Signal Processing</span></em>, pp. 1–5. doi: <a href="https://doi.org/10.1109/CISP.2009.5304005">10.1109/CISP.2009.5304005</a>.
+</div>
+<div id="ref-Stankova2023" class="csl-entry" role="listitem">
+Stankova, N. and Avetisyan, D. (2023) <span>“Modeling post-fire forest regrowth using tasseled cap-derived indicators,”</span> in Schulz, K., Nikolakopoulos, K. G., and Michel, U. (eds.) <em>Earth <span>Resources</span> and <span>Environmental Remote Sensing</span>/<span>GIS Applications XIV</span></em>. <span>Amsterdam, Netherlands</span>: <span>SPIE</span>, p. 54. doi: <a href="https://doi.org/10.1117/12.2679783">10.1117/12.2679783</a>.
+</div>
+<div id="ref-Stoyanov2022" class="csl-entry" role="listitem">
+Stoyanov, A. (2022) <span>“Application of <span>Tasseled Cap Transformation</span> of <span>Sentinel-2</span>—<span>MSI Data</span> for <span>Forest Monitoring</span> and <span>Change Detection</span> on <span>Territory</span> of <span>Natural Park</span> <span>‘<span>BLUE STONES</span>’</span>,”</span> <em>Environmental Sciences Proceedings</em>, 22(1), p. 42. doi: <a href="https://doi.org/10.3390/IECF2022-13073">10.3390/IECF2022-13073</a>.
+</div>
 <div id="ref-TheNatureConservancyn/d" class="csl-entry" role="listitem">
 The Nature Conservancy (n/d) <span>“What is <span>Remote Sensing</span>? <span></span> <span>Reef Resilience</span>.”</span> Available at: <a href="https://reefresilience.org/management-strategies/remote-sensing-and-mapping/introduction-to-remote-sensing/what-is-remote-sensing/">https://reefresilience.org/management-strategies/remote-sensing-and-mapping/introduction-to-remote-sensing/what-is-remote-sensing/</a> (Accessed: February 3, 2024).
+</div>
+<div id="ref-Wang2003" class="csl-entry" role="listitem">
+Wang, K. and Zhu, Y. (2003) <span>“Recognition of <span>Water Bodies</span> from <span>Remotely Sensed Imagery</span> by <span>Using Neural Network</span>,”</span> in. Available at: <a href="https://www.semanticscholar.org/paper/Recognition-of-Water-Bodies-from-Remotely-Sensed-by-Wang-Zhu/e9bfbfb9b558e0fccb5f49a51fdc24d558bef220">https://www.semanticscholar.org/paper/Recognition-of-Water-Bodies-from-Remotely-Sensed-by-Wang-Zhu/e9bfbfb9b558e0fccb5f49a51fdc24d558bef220</a> (Accessed: March 3, 2024).
+</div>
+<div id="ref-Zhuang2018" class="csl-entry" role="listitem">
+Zhuang, Y. and Chen, C. (2018) <span>“A <span>Method</span> for water body extraction based on the tasselled cap transformation from remote sensing images,”</span> in <em>2018 <span>Fifth International Workshop</span> on <span>Earth Observation</span> and <span>Remote Sensing Applications</span> (<span>EORSA</span>)</em>, pp. 1–5. doi: <a href="https://doi.org/10.1109/EORSA.2018.8598605">10.1109/EORSA.2018.8598605</a>.
 </div>
 </div>
 </section>

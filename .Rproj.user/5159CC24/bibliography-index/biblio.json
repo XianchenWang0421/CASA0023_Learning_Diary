@@ -1,6 +1,468 @@
 {
-    "sources": [],
+    "sources": [
+        {
+            "DOI": "10.1016/j.ecss.2018.10.021",
+            "ISSN": "0272-7714",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S0272771418306139",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        2
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Chen",
+                    "given": "Chao"
+                },
+                {
+                    "family": "Fu",
+                    "given": "Jiaoqi"
+                },
+                {
+                    "family": "Zhang",
+                    "given": "Shuai"
+                },
+                {
+                    "family": "Zhao",
+                    "given": "Xin"
+                }
+            ],
+            "container-title": "Estuarine, Coastal and Shelf Science",
+            "id": "Chen2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        2
+                    ]
+                ]
+            },
+            "page": "281-291",
+            "title": "Coastline information extraction based on the tasseled cap transformation of Landsat-8 OLI images",
+            "type": "article-journal",
+            "volume": "217"
+        },
+        {
+            "DOI": "10.1051/e3sconf/202021303024",
+            "ISSN": "2267-1242",
+            "URL": "https://www.e3s-conferences.org/articles/e3sconf/abs/2020/73/e3sconf_acic2020_03024/e3sconf_acic2020_03024.html",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        2
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Chen",
+                    "given": "Chao"
+                },
+                {
+                    "family": "Wang",
+                    "given": "Liyan"
+                },
+                {
+                    "family": "Chu",
+                    "given": "Yanli"
+                },
+                {
+                    "family": "He",
+                    "given": "Xinyue"
+                }
+            ],
+            "container-title": "E3S Web of Conferences",
+            "id": "Chen2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "03024",
+            "publisher": "EDP Sciences",
+            "title": "The method for water body information extraction in complex environment using GF-1 WFV images",
+            "type": "article-journal",
+            "volume": "213"
+        },
+        {
+            "DOI": "10.3390/rs14133001",
+            "ISSN": "2072-4292",
+            "URL": "https://www.mdpi.com/2072-4292/14/13/3001",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        2
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Chen",
+                    "given": "Chao"
+                },
+                {
+                    "family": "Chen",
+                    "given": "Huixin"
+                },
+                {
+                    "family": "Liang",
+                    "given": "Jintao"
+                },
+                {
+                    "family": "Huang",
+                    "given": "Wenlang"
+                },
+                {
+                    "family": "Xu",
+                    "given": "Wenxue"
+                },
+                {
+                    "family": "Li",
+                    "given": "Bin"
+                },
+                {
+                    "family": "Wang",
+                    "given": "Jianqiang"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "Chen2022",
+            "issue": "13",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        1
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "3001",
+            "publisher": "Multidisciplinary Digital Publishing Institute",
+            "title": "Extraction of Water Body Information from Remote Sensing Imagery While Considering Greenness and Wetness Based on Tasseled Cap Transformation",
+            "type": "article-journal",
+            "volume": "14"
+        },
+        {
+            "ISBN": "978-0-13-405816-0",
+            "author": [
+                {
+                    "family": "Jensen",
+                    "given": "John R."
+                }
+            ],
+            "edition": "4th",
+            "id": "Jensen2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015,
+                        4
+                    ]
+                ]
+            },
+            "publisher": "Prentice Hall Press",
+            "publisher-place": "USA",
+            "title": "Introductory Digital Image Processing: A Remote Sensing Perspective",
+            "title-short": "Introductory Digital Image Processing",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1109/CISP.2009.5304005",
+            "URL": "https://ieeexplore.ieee.org/document/5304005",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        2
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Liu",
+                    "given": "Qingsheng"
+                },
+                {
+                    "family": "Liu",
+                    "given": "Gaohuan"
+                }
+            ],
+            "container-title": "2009 2nd International Congress on Image and Signal Processing",
+            "id": "Liu2009",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009,
+                        10
+                    ]
+                ]
+            },
+            "page": "1-5",
+            "title": "Using Tasseled Cap Transformation of CBERS-02 Images to Detect Dieback or Dead Robinia Pseudoacacia Plantation",
+            "type": "paper-conference"
+        },
+        {
+            "DOI": "10.1109/CISP-BMEI48845.2019.8966053",
+            "URL": "https://ieeexplore.ieee.org/document/8966053",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        2
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Liu",
+                    "given": "Qingsheng"
+                }
+            ],
+            "container-title": "2019 12th International Congress on Image and Signal Processing, BioMedical Engineering and Informatics (CISP-BMEI)",
+            "id": "Liu2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        10
+                    ]
+                ]
+            },
+            "page": "1-5",
+            "title": "A Tasseled Cap Transformation for GF-2 Fused Multispectral Images",
+            "type": "paper-conference"
+        },
+        {
+            "DOI": "10.1117/12.2539649",
+            "URL": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11179/111792P/A-tasseled-cap-transformation-for-CBERS-04-fusion-multispectral-images/10.1117/12.2539649.full",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        2
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Liu",
+                    "given": "Qingsheng"
+                }
+            ],
+            "container-title": "Eleventh International Conference on Digital Image Processing (ICDIP 2019)",
+            "id": "Liu2019a",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        8
+                    ]
+                ]
+            },
+            "page": "730-736",
+            "publisher": "SPIE",
+            "title": "A tasseled cap transformation for CBERS-04 fusion multispectral images",
+            "type": "paper-conference",
+            "volume": "11179"
+        },
+        {
+            "DOI": "10.1117/12.2679783",
+            "ISBN": "978-1-5106-6697-9 978-1-5106-6698-6",
+            "URL": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12734/2679783/Modeling-post-fire-forest-regrowth-using-tasseled-cap-derived-indicators/10.1117/12.2679783.full",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Stankova",
+                    "given": "Nataliya"
+                },
+                {
+                    "family": "Avetisyan",
+                    "given": "Daniela"
+                }
+            ],
+            "container-title": "Earth Resources and Environmental Remote Sensing/GIS Applications XIV",
+            "editor": [
+                {
+                    "family": "Schulz",
+                    "given": "Karsten"
+                },
+                {
+                    "family": "Nikolakopoulos",
+                    "given": "Konstantinos G."
+                },
+                {
+                    "family": "Michel",
+                    "given": "Ulrich"
+                }
+            ],
+            "id": "Stankova2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        10
+                    ]
+                ]
+            },
+            "page": "54",
+            "publisher": "SPIE",
+            "publisher-place": "Amsterdam, Netherlands",
+            "title": "Modeling post-fire forest regrowth using tasseled cap-derived indicators",
+            "type": "paper-conference"
+        },
+        {
+            "DOI": "10.3390/IECF2022-13073",
+            "ISSN": "2673-4931",
+            "URL": "https://www.mdpi.com/2673-4931/22/1/42",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        2
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Stoyanov",
+                    "given": "Andrey"
+                }
+            ],
+            "container-title": "Environmental Sciences Proceedings",
+            "id": "Stoyanov2022",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "42",
+            "publisher": "Multidisciplinary Digital Publishing Institute",
+            "title": "Application of Tasseled Cap Transformation of Sentinel-2—MSI Data for Forest Monitoring and Change Detection on Territory of Natural Park “BLUE STONES”",
+            "type": "article-journal",
+            "volume": "22"
+        },
+        {
+            "URL": "https://reefresilience.org/management-strategies/remote-sensing-and-mapping/introduction-to-remote-sensing/what-is-remote-sensing/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        2,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "The Nature Conservancy"
+                }
+            ],
+            "id": "TheNatureConservancyn/d",
+            "issued": {
+                "date-parts": []
+            },
+            "title": "What is Remote Sensing?  Reef Resilience",
+            "type": ""
+        },
+        {
+            "URL": "https://www.semanticscholar.org/paper/Recognition-of-Water-Bodies-from-Remotely-Sensed-by-Wang-Zhu/e9bfbfb9b558e0fccb5f49a51fdc24d558bef220",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Wang",
+                    "given": "Kefei"
+                },
+                {
+                    "family": "Zhu",
+                    "given": "Yifeng"
+                }
+            ],
+            "id": "Wang2003",
+            "issued": {
+                "date-parts": [
+                    [
+                        2003,
+                        2
+                    ]
+                ]
+            },
+            "title": "Recognition of Water Bodies from Remotely Sensed Imagery by Using Neural Network",
+            "type": "paper-conference"
+        },
+        {
+            "DOI": "10.1109/EORSA.2018.8598605",
+            "URL": "https://ieeexplore.ieee.org/document/8598605",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        2
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Zhuang",
+                    "given": "Yue"
+                },
+                {
+                    "family": "Chen",
+                    "given": "Chao"
+                }
+            ],
+            "container-title": "2018 Fifth International Workshop on Earth Observation and Remote Sensing Applications (EORSA)",
+            "id": "Zhuang2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        6
+                    ]
+                ]
+            },
+            "page": "1-5",
+            "title": "A Method for water body extraction based on the tasselled cap transformation from remote sensing images",
+            "type": "paper-conference"
+        }
+    ],
     "project_biblios": [
-        "references.bib"
+        "CASA0023_Learning_Diary.bib"
     ]
 }

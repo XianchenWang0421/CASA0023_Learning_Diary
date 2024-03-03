@@ -2,6 +2,8 @@
 
 ## Summary
 
+This section will summarize the content of first week of remote sensing course, which is some basic remote sensing knowledge, including how to obtain remote sensing images, image features, etc. Some key points are listed below.
+
 ### Overview of remote sensing
 
 Remote sensing is a technology that senses and measures information on the earth's surface over long distances. It is now frequently used to obtain accurate and timely information, and most remote sensing data are analyzed using digital image processing techniques [@Jensen2015].
@@ -142,6 +144,16 @@ Land cover types of POIs:
 
 ![A: Line graph of spectral characteristics B: Density distribution plot of spectral features](figure/spectral_reflectance.jpg){width="80%"}
 
+It can be seen from the results that different POIs have different performances on different bands, and high urban has a larger difference than other POIs. Specific areas can be detected or classified through differences in band values in different areas, or by combining the values of several bands.
+
 ## Applications
 
+In the first week of study, I am most interested in Tasseled Cap transformation (TCT). It converts spectral information in remote sensing images into brightness, greenness, and wetness components, which can be applied in many fields.
+
+Specifically, TCT can help extract water bodies by obtaining the greenness and wetness components of remote sensing images, and can reduce the impact of shadows, dense vegetation and buildings [@Chen2020; @Chen2022; @Zhuang2018]. By considering the characteristics of coastline morphology and the greenness and wetness components, the TCT can also be used to extract coastline information, particularly in areas with high sediment concentration [@Chen2019].One study [@Wang2003] compared the TCT method with a Learning Vector Quantization (LVQ) neural network and a conventional rule-based method for water body extraction from Landsat 4 satellite images. It was found that the error of thresholding on the wetness in the TCT method is too large to be practical for this purpose. This suggests that while TCT can be useful for various remote sensing applications, its effectiveness for water body extraction may be limited under certain conditions or compared to other specialized methods.
+
+Components of TCT, such as brightness, greenness, and wetness, can provide valuable information about the condition and changes in forest vegetation over time [@Stoyanov2022; @Liu2019; @Liu2019a], also monitor the health of the forest [@Liu2009]. But the TCT parameters need to be recalculated for different sensors or spectral data, enabling more accurate classification of vegetation patches, crop types, and changes in forest health. Moreover, an innovative approach involved modeling post-fire forest regrowth using TCT-derived indicators [@Stankova2023]. This methodology leverages the TCT to increase the identification of components (soil, vegetation, and moisture) changing during a fire, thereby providing a cost-effective tool for monitoring the recovery of burnt forests.
+
 ## Reflections
+
+Overall, the first week was heavy and covered many basic concepts of remote sensing data, but it was not difficult in terms of understanding. These basics were important to me as a beginner in remote sensing because it gave me a clear understanding of the sources and structure of remotely sensed data and laid the foundation for subsequent courses. Although I was a bit overwhelmed when I first came across SNAP as a software, with a little bit of research on remote sensing data, I successfully used SNAP to get satisfactory analysis results. In addition, thanks to the emergence of packages such as stars and terra, it is easier and faster to analyse a large amount of remote sensing data in a unified way using R language, and the results can be presented in a more beautiful way. Therefore, for me personally, I prefer to use R for analyses.
