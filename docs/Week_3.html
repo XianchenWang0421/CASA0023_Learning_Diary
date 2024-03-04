@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./Week_4.html" rel="next">
 <link href="./Week_2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -64,6 +83,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -135,6 +156,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Week_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Policy applications</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -153,8 +180,13 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#corrections" id="toc-corrections" class="nav-link" data-scroll-target="#corrections"><span class="header-section-number">3.1.1</span> Corrections</a></li>
   <li><a href="#data-joining-and-enhancement" id="toc-data-joining-and-enhancement" class="nav-link" data-scroll-target="#data-joining-and-enhancement"><span class="header-section-number">3.1.2</span> Data joining and enhancement</a></li>
+  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical"><span class="header-section-number">3.1.3</span> Practical</a></li>
   </ul></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">3.2</span> Applications</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">3.2</span> Applications</a>
+  <ul class="collapse">
+  <li><a href="#ndvi" id="toc-ndvi" class="nav-link" data-scroll-target="#ndvi"><span class="header-section-number">3.2.1</span> NDVI</a></li>
+  <li><a href="#pca" id="toc-pca" class="nav-link" data-scroll-target="#pca"><span class="header-section-number">3.2.2</span> PCA</a></li>
+  </ul></li>
   <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">3.3</span> Reflections</a></li>
   </ul>
 </nav>
@@ -181,6 +213,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
+<p>This week’s content is very varied and covers the aspects of corrections, data joining and data enhancement. These operations are necessary, but there are many ways to implement them, and need to be flexible in choosing the method according to the specific problem. The following is a summary of some of the highlights.</p>
 <section id="corrections" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="corrections"><span class="header-section-number">3.1.1</span> Corrections</h3>
 <section id="geometric-correction" class="level4" data-number="3.1.1.1">
@@ -254,14 +287,143 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
+<section id="practical" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="practical"><span class="header-section-number">3.1.3</span> Practical</h3>
+<p>I focused on the data enhancement part of this week’s exercise, and here are some of the results of the experiment.</p>
+<section id="the-normalised-difference-vegetation-index-ndvi" class="level4" data-number="3.1.3.1">
+<h4 data-number="3.1.3.1" class="anchored" data-anchor-id="the-normalised-difference-vegetation-index-ndvi"><span class="header-section-number">3.1.3.1</span> The Normalised Difference Vegetation Index (NDVI)</h4>
+<p>The Normalized Difference Vegetation Index (NDVI) is a widely used vegetation index derived from satellite images. Plants have a unique reflectance characteristic, they reflect more near-infrared (NIR) light and absorb more visible light. When plants are healthy, they have a high chlorophyll content, which allows them to absorb more light in the red region of the spectrum and reflect more light in the NIR region. So NDVI uses this characteristic of plants to differentiate healthy vegetation from non-vegetation or unhealthy vegetation. The formula is as follows:</p>
+<p><span class="math display">\[
+NDVI = \frac{NIR-Red}{NIR+Red}
+\]</span></p>
+<p>The figure below shows the NDVI results for the northern part of Cape Town.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/NDVI.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">NDVI result for north of Cape Town</figcaption>
+</figure>
+</div>
+<p>Areas with NDVI values greater than or equal to 0.2 were extracted. From the figure, it can be observed that the vegetation cover is concentrated in the south-eastern part of the country, while the north-western part of the country has very little vegetation cover.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/veg.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">NDVI result for north of Cape Town (values above or equal to 0.2)</figcaption>
+</figure>
+</div>
+</section>
+<section id="principal-component-analysis-pca" class="level4" data-number="3.1.3.2">
+<h4 data-number="3.1.3.2" class="anchored" data-anchor-id="principal-component-analysis-pca"><span class="header-section-number">3.1.3.2</span> Principal Component Analysis (PCA)</h4>
+<p>PCA identifies duplicate data over multiple channels, reduces redundancy, and speeds up the processing time. It is useful to run the principal component analysis on multiple bands, as we found that the latter components did not contain more useful information. Most of the variance (eigenvalues) lies in principal components 1, 2 and 3, then only these three principal components need to be used.</p>
+<table class="table">
+<caption>PCA numerical result for north of Cape Town</caption>
+<colgroup>
+<col style="width: 30%">
+<col style="width: 7%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Components:</th>
+<th>PC1</th>
+<th>PC2</th>
+<th>PC3</th>
+<th>PC4</th>
+<th>PC5</th>
+<th>PC6</th>
+<th>PC7</th>
+<th>PC8</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Standard deviation</td>
+<td>2.655</td>
+<td>0.71471</td>
+<td>0.47307</td>
+<td>0.3667</td>
+<td>0.24626</td>
+<td>0.10550</td>
+<td>0.08700</td>
+<td>0.05873</td>
+</tr>
+<tr class="even">
+<td>Proportion of Variance 0.881</td>
+<td>0.881</td>
+<td>0.06385</td>
+<td>0.02797</td>
+<td>0.0168</td>
+<td>0.00758</td>
+<td>0.00139</td>
+<td>0.00095</td>
+<td>0.00043</td>
+</tr>
+<tr class="odd">
+<td>Cumulative Proportion</td>
+<td>0.881</td>
+<td>0.94487</td>
+<td>0.97285</td>
+<td>0.9897</td>
+<td>0.99723</td>
+<td>0.99862</td>
+<td>0.99957</td>
+<td>1.00000</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/pca.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Image mapping result of PCA for north of Cape Town</figcaption>
+</figure>
+</div>
+</section>
+</section>
 </section>
 <section id="applications" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">3.2</span> Applications</h2>
+<p>This week’s application focuses on the NDVI and PCA sections, where a great deal of research exists and I will be looking for topics of interest to discuss.</p>
+<section id="ndvi" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="ndvi"><span class="header-section-number">3.2.1</span> NDVI</h3>
+<p>A study <span class="citation" data-cites="Eisfelder2023">(<a href="references.html#ref-Eisfelder2023" role="doc-biblioref">Eisfelder <em>et al.</em>, 2023</a>)</span> used satellite imagery to observe changes in plant growth in Europe and North Africa over a 30-year period. They used the NDVI index to measure plant growth, comparing the amount of light absorbed and reflected by plants. However, sometimes cloud cover can affect the NDVI results. And the study looks at changes over a long period of time, but may not capture the rapid changes that occur from one year to the next. In addition, the NDVI index may not be applicable to all types of plants.</p>
+<p>Another study <span class="citation" data-cites="Priya2023">(<a href="references.html#ref-Priya2023" role="doc-biblioref">Priya <em>et al.</em>, 2023</a>)</span> used satellite imagery from 2011 to 2021 to track how Tamil Nadu’s plants and trees have changed over time. The researchers used two main tools, NDVI and enhanced vegetation index (EVI). However studies using NDVI and EVI may equally face problems such as cloud cover affecting the quality of satellite images, which may lead to inaccurate vegetation assessment. And the resolution of MODIS data at 250 metres may not capture small-scale vegetation changes, which may be important for understanding local agricultural practices or small forested areas. In addition, the study was limited to 11 years, which may not be sufficient to understand long-term vegetation dynamics or the effects of climate change on vegetation patterns.</p>
+<p>In addition to this, there is a study <span class="citation" data-cites="Costa2023">(<a href="references.html#ref-Costa2023" role="doc-biblioref">Costa, Lameira and Costa, 2023</a>)</span> that uses high-resolution Pléiades satellite images with four spectral bands to analyse the structure of vegetation and uses a vegetation index called NDVI to help monitor Brazilian vegetation, with denser vegetation having higher NDVI values. But the study only covers two forest fragments, which may not be representative of Brazil’s diverse forest ecosystems, limiting the generalisability of the results. It uses NDVI values derived from Pléiades imagery at a spatial resolution of 2 metres, which may not capture very small patterns or changes in vegetation. And there is no mention of comparisons with ground truth or other satellite data to validate NDVI results from Pléiades imagery.</p>
+</section>
+<section id="pca" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="pca"><span class="header-section-number">3.2.2</span> PCA</h3>
+<p>One study <span class="citation" data-cites="Dai2023">(<a href="references.html#ref-Dai2023" role="doc-biblioref">Dai, 2023</a>)</span> used PCA to process images taken by satellites, including reducing the size of colour satellite images, reducing unwanted random patterns or “noise” in those images and combining different types of satellite images to obtain more information. However, this study does not mention the computational resources required for PCA, which could be important and affect its usefulness for some users. And there is no comparison of PCA with other image processing techniques.</p>
+<p>And a study <span class="citation" data-cites="Mishra2023">(<a href="references.html#ref-Mishra2023" role="doc-biblioref">Mishra <em>et al.</em>, 2023</a>)</span> used PCA to identify and extract the most important features in low-resolution multispectral (LRMS) images and combined it with image enhancement techniques to obtain higher-quality images for uses such as agriculture and security. However, the method may affect the quality of remote sensing images under different environmental conditions. Also the computational complexity of the method is not discussed, which is crucial for practical applications where processing time is a factor. In addition, the potential loss of information may occur in the spatial or spectral domain, which is also an aspect that needs to be considered in the method.</p>
+</section>
 </section>
 <section id="reflections" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">3.3</span> Reflections</h2>
+<p>Once again, I lament the fact that this week covered a lot of remote sensing and was more theoretical, due to the calibration aspect. While in practice, these theoretical formulas are yet easy to use in R, but take a while to run. What was really difficult was the texture analysis, which is such a computationally intensive task that it took a long, long time to perform. Cropping out smaller study areas is a better way to deal with this, or using Google Earth Engine.</p>
+<p>This week I delved into both NDVI and PCA. Although the formula for NDVI seems relatively simple, it needs to be adjusted for different satellite data. It is a simple but effective way to get a good idea of the vegetation cover in an area. As for PCA, it is perfect for dealing with remotely sensed data that has many dimensions, thus showing which aspect of the data is crucial, and researchers can therefore focus more on the important parts of the data.</p>
+<p>By studying this week’s content, I have learnt what appropriate methods should need to be applied in order to deal with different problems (calibration to data connectivity to data enhancement problems). Although many of the methods were not all practised due to time, this at least provided me with an idea of how to solve the problem.</p>
 
 
+<div id="refs" class="references csl-bib-body" role="list" style="display: none">
+<div id="ref-Costa2023" class="csl-entry" role="listitem">
+Costa, A. da S., Lameira, O. A. and Costa, D. L. C. (2023) <span>“The use of <span>NDVI</span> derived from <span class="nocase">Pl<span class="nocase">é</span>iade</span> images in the analysis of the vegetation structure in two forest fragments,”</span> <em>Seven Editora</em>. Available at: <a href="https://sevenpublicacoes.com.br/index.php/editora/article/view/984">https://sevenpublicacoes.com.br/index.php/editora/article/view/984</a> (Accessed: March 3, 2024).
+</div>
+<div id="ref-Dai2023" class="csl-entry" role="listitem">
+Dai, H. (2023) <span>“Application of <span>PCA Numalgorithm</span> in <span>Remote Sensing Image Processing</span>,”</span> <em>Modern Electronic Technology</em>, 7(1), pp. 17–21. doi: <a href="https://doi.org/10.26549/met.v7i1.12317">10.26549/met.v7i1.12317</a>.
+</div>
+<div id="ref-Eisfelder2023" class="csl-entry" role="listitem">
+Eisfelder, C. <em>et al.</em> (2023) <span>“Seasonal <span>Vegetation Trends</span> for <span>Europe</span> over 30 <span>Years</span> from a <span>Novel Normalised Difference Vegetation Index</span> (<span>NDVI</span>) <span>Time-Series</span>—<span>The TIMELINE NDVI Product</span>,”</span> <em>Remote Sensing</em>, 15(14), p. 3616. doi: <a href="https://doi.org/10.3390/rs15143616">10.3390/rs15143616</a>.
+</div>
+<div id="ref-Mishra2023" class="csl-entry" role="listitem">
+Mishra, R. <em>et al.</em> (2023) <span>“Remote <span>Sensing Image Fusion Based</span> on <span>PCA</span> and <span>Wavelets</span>,”</span> in Bhateja, V. et al. (eds.) <em>Intelligent <span>Data Engineering</span> and <span>Analytics</span></em>. Singapore: Springer Nature (Smart <span>Innovation</span>, <span>Systems</span> and <span>Technologies</span>), pp. 25–33. doi: <a href="https://doi.org/10.1007/978-981-19-7524-0_3">10.1007/978-981-19-7524-0_3</a>.
+</div>
+<div id="ref-Priya2023" class="csl-entry" role="listitem">
+Priya, M. V. <em>et al.</em> (2023) <span>“Monitoring vegetation dynamics using multi-temporal <span>NDVI</span> and <span>EVI</span> images for different agro climatic zones of <span>Tamil Nadu</span>.”</span> doi: <a href="https://doi.org/10.21203/rs.3.rs-2967925/v1">10.21203/rs.3.rs-2967925/v1</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -620,8 +782,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Week_4.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Policy applications</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,6 +1,63 @@
 {
     "sources": [
         {
+            "DOI": "10.3390/rs15041082",
+            "ISSN": "2072-4292",
+            "URL": "https://www.mdpi.com/2072-4292/15/4/1082",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Bailey",
+                    "given": "Jennifer"
+                },
+                {
+                    "family": "Ramacher",
+                    "given": "Martin Otto Paul"
+                },
+                {
+                    "family": "Speyer",
+                    "given": "Orestis"
+                },
+                {
+                    "family": "Athanasopoulou",
+                    "given": "Eleni"
+                },
+                {
+                    "family": "Karl",
+                    "given": "Matthias"
+                },
+                {
+                    "family": "Gerasopoulos",
+                    "given": "Evangelos"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "Bailey2023",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        2
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "1082",
+            "title": "Localizing SDG 11.6.2 via Earth Observation, Modelling Applications, and Harmonised City Definitions: Policy Implications on Addressing Air Pollution",
+            "title-short": "Localizing SDG 11.6.2 via Earth Observation, Modelling Applications, and Harmonised City Definitions",
+            "type": "article-journal",
+            "volume": "15"
+        },
+        {
             "DOI": "10.1016/j.ecss.2018.10.021",
             "ISSN": "0272-7714",
             "URL": "https://www.sciencedirect.com/science/article/pii/S0272771418306139",
@@ -155,6 +212,407 @@
             "volume": "14"
         },
         {
+            "URL": "https://sevenpublicacoes.com.br/index.php/editora/article/view/984",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Costa",
+                    "given": "Anderson da Silva"
+                },
+                {
+                    "family": "Lameira",
+                    "given": "Osmar Alves"
+                },
+                {
+                    "family": "Costa",
+                    "given": "Debora Lisboa Correa"
+                }
+            ],
+            "container-title": "Seven Editora",
+            "id": "Costa2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        4
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "The use of NDVI derived from Pléiade images in the analysis of the vegetation structure in two forest fragments",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.26549/met.v7i1.12317",
+            "ISSN": "2591-7129",
+            "URL": "https://ojs.s-p.sg/index.php/met/article/view/12317",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Dai",
+                    "given": "Hong"
+                }
+            ],
+            "container-title": "Modern Electronic Technology",
+            "id": "Dai2023",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        4
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "17-21",
+            "title": "Application of PCA Numalgorithm in Remote Sensing Image Processing",
+            "type": "article-journal",
+            "volume": "7"
+        },
+        {
+            "DOI": "10.1038/s41598-022-15160-3",
+            "ISSN": "2045-2322",
+            "URL": "https://www.nature.com/articles/s41598-022-15160-3",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Danek",
+                    "given": "Tomasz"
+                },
+                {
+                    "family": "Weglinska",
+                    "given": "Elzbieta"
+                },
+                {
+                    "family": "Zareba",
+                    "given": "Mateusz"
+                }
+            ],
+            "container-title": "Scientific Reports",
+            "id": "Danek2022",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        6
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "11050",
+            "publisher": "Nature Publishing Group",
+            "title": "The influence of meteorological factors and terrain on air pollution concentration and migration: A geostatistical case study from Krakow, Poland",
+            "title-short": "The influence of meteorological factors and terrain on air pollution concentration and migration",
+            "type": "article-journal",
+            "volume": "12"
+        },
+        {
+            "DOI": "10.3390/rs15143616",
+            "ISSN": "2072-4292",
+            "URL": "https://www.mdpi.com/2072-4292/15/14/3616",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Eisfelder",
+                    "given": "Christina"
+                },
+                {
+                    "family": "Asam",
+                    "given": "Sarah"
+                },
+                {
+                    "family": "Hirner",
+                    "given": "Andreas"
+                },
+                {
+                    "family": "Reiners",
+                    "given": "Philipp"
+                },
+                {
+                    "family": "Holzwarth",
+                    "given": "Stefanie"
+                },
+                {
+                    "family": "Bachmann",
+                    "given": "Martin"
+                },
+                {
+                    "family": "Gessner",
+                    "given": "Ursula"
+                },
+                {
+                    "family": "Dietz",
+                    "given": "Andreas"
+                },
+                {
+                    "family": "Huth",
+                    "given": "Juliane"
+                },
+                {
+                    "family": "Bachofer",
+                    "given": "Felix"
+                },
+                {
+                    "family": "Kuenzer",
+                    "given": "Claudia"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "Eisfelder2023",
+            "issue": "14",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        1
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "3616",
+            "publisher": "Multidisciplinary Digital Publishing Institute",
+            "title": "Seasonal Vegetation Trends for Europe over 30 Years from a Novel Normalised Difference Vegetation Index (NDVI) Time-Series—The TIMELINE NDVI Product",
+            "type": "article-journal",
+            "volume": "15"
+        },
+        {
+            "URL": "http://www.unep.org/resources/assessment/actions-air-quality",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Environment",
+                    "given": "U. N."
+                }
+            ],
+            "chapter-number": "publications",
+            "container-title": "UNEP - UN Environment Programme",
+            "id": "Environment2016",
+            "issued": {
+                "date-parts": []
+            },
+            "language": "en-US",
+            "title": "Actions on Air Quality",
+            "type": ""
+        },
+        {
+            "URL": "http://www.unep.org/resources/report/actions-air-quality-global-summary-policies-and-programmes-reduce-air-pollution",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Environment",
+                    "given": "U. N."
+                }
+            ],
+            "chapter-number": "publications",
+            "container-title": "UNEP - UN Environment Programme",
+            "id": "Environment2021",
+            "issued": {
+                "date-parts": []
+            },
+            "language": "en-US",
+            "title": "Actions on Air Quality: A Global Summary of Policies and Programmes to Reduce Air Pollution",
+            "title-short": "Actions on Air Quality",
+            "type": ""
+        },
+        {
+            "URL": "https://sigmaearth.com/new-york-air-quality-challenges-and-solutions/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Greenfield",
+                    "given": "Dr Emily"
+                }
+            ],
+            "container-title": "Sigma Earth",
+            "id": "Greenfield2023a",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        12
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "New York Air Quality: Challenges And Solutions",
+            "title-short": "New York Air Quality",
+            "type": ""
+        },
+        {
+            "DOI": "10.1126/sciadv.abl7575",
+            "ISSN": "2375-2548",
+            "PMCID": "PMC8809542",
+            "PMID": "35108043",
+            "URL": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8809542/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Huang",
+                    "given": "Yuhan"
+                },
+                {
+                    "family": "Lee",
+                    "given": "Casey K. C."
+                },
+                {
+                    "family": "Yam",
+                    "given": "Yat-Shing"
+                },
+                {
+                    "family": "Mok",
+                    "given": "Wai-Chuen"
+                },
+                {
+                    "family": "Zhou",
+                    "given": "John L."
+                },
+                {
+                    "family": "Zhuang",
+                    "given": "Yuan"
+                },
+                {
+                    "family": "Surawski",
+                    "given": "Nic C."
+                },
+                {
+                    "family": "Organ",
+                    "given": "Bruce"
+                },
+                {
+                    "family": "Chan",
+                    "given": "Edward F. C."
+                }
+            ],
+            "container-title": "Science Advances",
+            "id": "Huang2022",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        2
+                    ]
+                ]
+            },
+            "page": "eabl7575",
+            "title": "Rapid detection of high-emitting vehicles by on-road remote sensing technology improves urban air quality",
+            "type": "article-journal",
+            "volume": "8"
+        },
+        {
+            "DOI": "10.30564/jasr.v6i3.5834",
+            "ISSN": "2630-5119",
+            "URL": "https://journals.bilpubgroup.com/index.php/jasr/article/view/5834",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Jamal Jumaah",
+                    "given": "Huda"
+                },
+                {
+                    "family": "Jasim",
+                    "given": "Abed"
+                },
+                {
+                    "family": "Rashid",
+                    "given": "Aydin"
+                },
+                {
+                    "family": "Ajaj",
+                    "given": "Qayssar"
+                }
+            ],
+            "container-title": "Journal of Atmospheric Science Research",
+            "id": "JamalJumaah2023",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        8
+                    ]
+                ]
+            },
+            "page": "41-51",
+            "title": "Air Pollution Risk Assessment Using GIS and Remotely Sensed Data in Kirkuk City, Iraq",
+            "type": "article-journal",
+            "volume": "6"
+        },
+        {
             "ISBN": "978-0-13-405816-0",
             "author": [
                 {
@@ -281,6 +739,195 @@
             "volume": "11179"
         },
         {
+            "DOI": "10.1007/978-981-19-7524-0_3",
+            "ISBN": "978-981-19752-4-0",
+            "author": [
+                {
+                    "family": "Mishra",
+                    "given": "Reetika"
+                },
+                {
+                    "family": "Bhateja",
+                    "given": "Vikrant"
+                },
+                {
+                    "family": "Banerjee",
+                    "given": "Rupa"
+                },
+                {
+                    "family": "Lay-Ekuakille",
+                    "given": "Aime’"
+                },
+                {
+                    "family": "Senkerik",
+                    "given": "Roman"
+                }
+            ],
+            "collection-title": "Smart Innovation, Systems and Technologies",
+            "container-title": "Intelligent Data Engineering and Analytics",
+            "editor": [
+                {
+                    "family": "Bhateja",
+                    "given": "Vikrant"
+                },
+                {
+                    "family": "Yang",
+                    "given": "Xin-She"
+                },
+                {
+                    "family": "Chun-Wei Lin",
+                    "given": "Jerry"
+                },
+                {
+                    "family": "Das",
+                    "given": "Ranjita"
+                }
+            ],
+            "id": "Mishra2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "25-33",
+            "publisher": "Springer Nature",
+            "publisher-place": "Singapore",
+            "title": "Remote Sensing Image Fusion Based on PCA and Wavelets",
+            "type": "paper-conference"
+        },
+        {
+            "URL": "https://comptroller.nyc.gov/services/for-the-public/nyc-climate-dashboard/emissions/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        4
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "New York City Comptroller"
+                }
+            ],
+            "container-title": "Office of the New York City Comptroller Brad Lander",
+            "id": "NewYorkCityComptrollern/d",
+            "issued": {
+                "date-parts": []
+            },
+            "language": "en-US",
+            "title": "Emissions",
+            "type": ""
+        },
+        {
+            "URL": "https://climate.cityofnewyork.us/reports/onenyc-2050/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "New York City’s climate team"
+                }
+            ],
+            "container-title": "NYC Mayor’s Office of Climate and Environmental Justice",
+            "id": "NewYorkCitysClimateTeamn/d",
+            "issued": {
+                "date-parts": []
+            },
+            "language": "en-US",
+            "title": "OneNYC 2050",
+            "type": ""
+        },
+        {
+            "URL": "https://www.nyc.gov/site/doh/health/health-topics/air-quality-air-pollution-protection.page",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "NYC health"
+                }
+            ],
+            "id": "NYCHealthn/d",
+            "issued": {
+                "date-parts": []
+            },
+            "title": "Outdoor Air Quality - NYC Health",
+            "type": ""
+        },
+        {
+            "DOI": "10.21203/rs.3.rs-2967925/v1",
+            "URL": "https://www.researchsquare.com",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "annote": "titleTranslation:",
+            "author": [
+                {
+                    "family": "Priya",
+                    "given": "M. V."
+                },
+                {
+                    "family": "Kalpana",
+                    "given": "R."
+                },
+                {
+                    "family": "Pazhanivelan",
+                    "given": "S."
+                },
+                {
+                    "family": "Kumaraperumal",
+                    "given": "R."
+                },
+                {
+                    "family": "Ragunath",
+                    "given": "K. P."
+                },
+                {
+                    "family": "Vanitha",
+                    "given": "G."
+                },
+                {
+                    "family": "Ashmitha",
+                    "given": "Nihar"
+                }
+            ],
+            "id": "Priya2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        6
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "Monitoring vegetation dynamics using multi-temporal NDVI and EVI images for different agro climatic zones of Tamil Nadu",
+            "type": ""
+        },
+        {
             "DOI": "10.1117/12.2679783",
             "ISBN": "978-1-5106-6697-9 978-1-5106-6698-6",
             "URL": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12734/2679783/Modeling-post-fire-forest-regrowth-using-tasseled-cap-derived-indicators/10.1117/12.2679783.full",
@@ -370,6 +1017,80 @@
             "volume": "22"
         },
         {
+            "DOI": "10.1117/12.2679297",
+            "ISBN": "978-1-5106-6699-3 978-1-5106-6700-6",
+            "URL": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12735/2679297/The-future-of-urban-air-quality-management-in-Thailand/10.1117/12.2679297.full",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Sukawattanavijit",
+                    "given": "Chanika"
+                },
+                {
+                    "family": "Kruasilp",
+                    "given": "Jiratiwan"
+                },
+                {
+                    "family": "Kaewmesri",
+                    "given": "Pramet"
+                },
+                {
+                    "family": "Lhapawong",
+                    "given": "Kulapach"
+                },
+                {
+                    "family": "Kitratporn",
+                    "given": "Nuntikorn"
+                },
+                {
+                    "family": "Punnasiri",
+                    "given": "Kornwipa"
+                },
+                {
+                    "family": "Pumipan",
+                    "given": "Tipkamon"
+                }
+            ],
+            "container-title": "Remote Sensing Technologies and Applications in Urban Environments VIII",
+            "editor": [
+                {
+                    "family": "Chrysoulakis",
+                    "given": "Nektarios"
+                },
+                {
+                    "family": "Erbertseder",
+                    "given": "Thilo"
+                },
+                {
+                    "family": "Zhang",
+                    "given": "Ying"
+                }
+            ],
+            "id": "Sukawattanavijit2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        10
+                    ]
+                ]
+            },
+            "page": "19",
+            "publisher": "SPIE",
+            "publisher-place": "Amsterdam, Netherlands",
+            "title": "The future of urban air quality management in Thailand: The cutting-edge platform for monitoring and management of public health and sustainable development",
+            "title-short": "The future of urban air quality management in Thailand",
+            "type": "paper-conference"
+        },
+        {
             "URL": "https://reefresilience.org/management-strategies/remote-sensing-and-mapping/introduction-to-remote-sensing/what-is-remote-sensing/",
             "accessed": {
                 "date-parts": [
@@ -424,6 +1145,30 @@
             },
             "title": "Recognition of Water Bodies from Remotely Sensed Imagery by Using Neural Network",
             "type": "paper-conference"
+        },
+        {
+            "URL": "https://www.who.int/publications/who-guidelines",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        3
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "World Health Organization"
+                }
+            ],
+            "id": "WorldHealthOrganizationn/d",
+            "issued": {
+                "date-parts": []
+            },
+            "language": "en-US",
+            "title": "WHO Guidelines",
+            "type": ""
         },
         {
             "DOI": "10.1109/EORSA.2018.8598605",
