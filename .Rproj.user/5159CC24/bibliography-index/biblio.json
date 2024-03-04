@@ -1,6 +1,46 @@
 {
     "sources": [
         {
+            "DOI": "10.3390/ECWS-7-14171",
+            "ISSN": "2673-4931",
+            "URL": "https://www.mdpi.com/2673-4931/25/1/52",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        4
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Atay",
+                    "given": "Mervegul Aykanat"
+                },
+                {
+                    "family": "Kaplan",
+                    "given": "Gordana"
+                }
+            ],
+            "container-title": "Environmental Sciences Proceedings",
+            "id": "Atay2023",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "52",
+            "publisher": "Multidisciplinary Digital Publishing Institute",
+            "title": "Large-Scale Mapping of Inland Waters with Google Earth Engine Using Remote Sensing",
+            "type": "article-journal",
+            "volume": "25"
+        },
+        {
             "DOI": "10.3390/rs15041082",
             "ISSN": "2072-4292",
             "URL": "https://www.mdpi.com/2072-4292/15/4/1082",
@@ -465,6 +505,120 @@
             "type": ""
         },
         {
+            "ISBN": "978-1-00-317501-8",
+            "author": [
+                {
+                    "family": "Gašparović",
+                    "given": "Gordana Kaplan",
+                    "suffix": "Mateo"
+                }
+            ],
+            "container-title": "Geospatial Information Handbook for Water Resources and Watershed Management, Volume I",
+            "id": "Gasparovic2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "publisher": "CRC Press",
+            "title": "Large-Scale Mapping and Monitoring Inland Waters by Google Earth Engine and Remote Sensing Techniques",
+            "type": "chapter"
+        },
+        {
+            "DOI": "10.3390/app10134574",
+            "ISSN": "2076-3417",
+            "URL": "https://www.mdpi.com/2076-3417/10/13/4574",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        4
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Ghaffarian",
+                    "given": "Saman"
+                },
+                {
+                    "family": "Rezaie Farhadabad",
+                    "given": "Ali"
+                },
+                {
+                    "family": "Kerle",
+                    "given": "Norman"
+                }
+            ],
+            "container-title": "Applied Sciences",
+            "id": "Ghaffarian2020",
+            "issue": "13",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        1
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "4574",
+            "publisher": "Multidisciplinary Digital Publishing Institute",
+            "title": "Post-Disaster Recovery Monitoring with Google Earth Engine",
+            "type": "article-journal",
+            "volume": "10"
+        },
+        {
+            "URL": "https://developers.google.com/earth-engine/guides/client_server",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        4
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Google for Developers"
+                }
+            ],
+            "id": "GoogleForDevelopersn/d",
+            "issued": {
+                "date-parts": []
+            },
+            "language": "en-US",
+            "title": "Client vs. Server  Google Earth Engine  Google for Developers",
+            "type": ""
+        },
+        {
+            "URL": "https://earthengine.google.com",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        4
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Google"
+                }
+            ],
+            "id": "Googlen/d",
+            "issued": {
+                "date-parts": []
+            },
+            "title": "Google Earth Engine",
+            "type": ""
+        },
+        {
             "URL": "https://sigmaearth.com/new-york-air-quality-challenges-and-solutions/",
             "accessed": {
                 "date-parts": [
@@ -494,6 +648,37 @@
             "language": "en-US",
             "title": "New York Air Quality: Challenges And Solutions",
             "title-short": "New York Air Quality",
+            "type": ""
+        },
+        {
+            "URL": "https://www.techwebspace.com/server-side-vs-client-side-programming-languages/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        4
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Hawkins",
+                    "given": "Lara"
+                }
+            ],
+            "container-title": "Tech Web Space",
+            "id": "Hawkins2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        10
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "Server-Side vs Client-Side Programming Languages",
             "type": ""
         },
         {
@@ -872,6 +1057,55 @@
             "type": ""
         },
         {
+            "DOI": "10.1007/s12145-023-01035-2",
+            "ISSN": "1865-0481",
+            "URL": "https://doi.org/10.1007/s12145-023-01035-2",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        4
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Pham-Duc",
+                    "given": "Binh"
+                },
+                {
+                    "family": "Nguyen",
+                    "given": "Ho"
+                },
+                {
+                    "family": "Phan",
+                    "given": "Hien"
+                },
+                {
+                    "family": "Tran-Anh",
+                    "given": "Quan"
+                }
+            ],
+            "container-title": "Earth Science Informatics",
+            "id": "Pham-Duc2023",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        9
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "2355-2371",
+            "title": "Trends and applications of google earth engine in remote sensing and earth science research: A bibliometric analysis using scopus database",
+            "title-short": "Trends and applications of google earth engine in remote sensing and earth science research",
+            "type": "article-journal",
+            "volume": "16"
+        },
+        {
             "DOI": "10.21203/rs.3.rs-2967925/v1",
             "URL": "https://www.researchsquare.com",
             "accessed": {
@@ -926,6 +1160,49 @@
             "language": "en-US",
             "title": "Monitoring vegetation dynamics using multi-temporal NDVI and EVI images for different agro climatic zones of Tamil Nadu",
             "type": ""
+        },
+        {
+            "DOI": "10.2166/hydro.2023.137",
+            "ISSN": "1464-7141",
+            "URL": "https://doi.org/10.2166/hydro.2023.137",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        4
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Sherjah",
+                    "given": "P. Y."
+                },
+                {
+                    "family": "Sajikumar",
+                    "given": "N."
+                },
+                {
+                    "family": "Nowshaja",
+                    "given": "P. T."
+                }
+            ],
+            "container-title": "Journal of Hydroinformatics",
+            "id": "Sherjah2023",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        1
+                    ]
+                ]
+            },
+            "page": "432-450",
+            "title": "Quality monitoring of inland water bodies using Google Earth Engine",
+            "type": "article-journal",
+            "volume": "25"
         },
         {
             "DOI": "10.1117/12.2679783",

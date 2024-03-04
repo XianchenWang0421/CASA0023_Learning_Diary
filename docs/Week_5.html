@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Xianchen Wang">
-<meta name="dcterms.date" content="2024-03-04">
 
-<title>CASA0023 Learning Diary</title>
+<title>CASA0023 Learning Diary - 5&nbsp; Week 5 - An introduction to Google Earth Engine</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -32,7 +49,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Week_1.html" rel="next">
+<link href="./references.html" rel="next">
+<link href="./Week_4.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -77,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Introduction</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week_5.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5 - An introduction to Google Earth Engine</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -112,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
@@ -142,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week_5.html" class="sidebar-item-text sidebar-link">
+  <a href="./Week_5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5 - An introduction to Google Earth Engine</span></span></a>
   </div>
 </li>
@@ -162,7 +180,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">5.1</span> Summary</a>
+  <ul class="collapse">
+  <li><a href="#google-earth-engine-gee" id="toc-google-earth-engine-gee" class="nav-link" data-scroll-target="#google-earth-engine-gee"><span class="header-section-number">5.1.1</span> Google Earth Engine (GEE)</a></li>
+  <li><a href="#client-and-server-side" id="toc-client-and-server-side" class="nav-link" data-scroll-target="#client-and-server-side"><span class="header-section-number">5.1.2</span> Client and server side</a></li>
+  <li><a href="#gee-in-action" id="toc-gee-in-action" class="nav-link" data-scroll-target="#gee-in-action"><span class="header-section-number">5.1.3</span> GEE in action</a></li>
+  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical"><span class="header-section-number">5.1.4</span> Practical</a></li>
+  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">5.2</span> Applications</a></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">5.3</span> Reflections</a></li>
   </ul>
 </nav>
     </div>
@@ -171,26 +197,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">CASA0023 Learning Diary</h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5 - An introduction to Google Earth Engine</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Xianchen Wang </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">March 4, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -198,11 +212,132 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level1 unnumbered">
-<h1 class="unnumbered">Introduction</h1>
-<p>This is the learning diary of the CASA0023 (Remotely Sensing Cities and Environments).</p>
+<section id="summary" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.1</span> Summary</h2>
+<p>This week I learned Google Earth Engine (GEE). The main content includes GEE basic knowledge and applications. The key application direction is reducing images and image enhancement. The biggest benefit of using GEE is that it speeds up all processes of analysis. The knowledge points will be briefly summarized below.</p>
+<section id="google-earth-engine-gee" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="google-earth-engine-gee"><span class="header-section-number">5.1.1</span> Google Earth Engine (GEE)</h3>
+<p>Google Earth Engine is a cloud-based platform developed by Google for planetary-scale environmental data analysis <span class="citation" data-cites="Googlen/d">(<a href="references.html#ref-Googlen/d" role="doc-biblioref">Google, n/d</a>)</span>. It allows users to access a vast amount of geospatial data, including satellite imagery, and perform complex analyses using Google’s computational resources.</p>
+<p>GEE uses Javascript (a Website programming language) or Python (sometimes).</p>
+</section>
+<section id="client-and-server-side" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="client-and-server-side"><span class="header-section-number">5.1.2</span> Client and server side</h3>
+<p>Geospatial analysis from the client is converted into Earth Engine requests. Earth Engine objects need to be distinguished from other JavaScript objects or primitives <span class="citation" data-cites="GoogleForDevelopersn/d">(<a href="references.html#ref-GoogleForDevelopersn/d" role="doc-biblioref">Google for Developers, n/d</a>)</span>.</p>
+<ul>
+<li>Looping: server-side mapping</li>
+<li>Conditionals: server-side conditional</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/Client_Server_Side.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Client side vs Server side <span class="citation" data-cites="Hawkins2018">(<a href="references.html#ref-Hawkins2018" role="doc-biblioref">Hawkins, 2018</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="gee-in-action" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3" class="anchored" data-anchor-id="gee-in-action"><span class="header-section-number">5.1.3</span> GEE in action</h3>
+<section id="reducing-images" class="level4" data-number="5.1.3.1">
+<h4 data-number="5.1.3.1" class="anchored" data-anchor-id="reducing-images"><span class="header-section-number">5.1.3.1</span> Reducing images</h4>
+<ul>
+<li><p>ee.Reducer can reduce a collection of images to the extreme value of each pixel</p></li>
+<li><p>reduceRegion() is used to reduce images by region</p></li>
+<li><p>reduceNeighborhood() is used to reduce the image by neighborhood (A window of pixels/kernel)</p></li>
+</ul>
+</section>
+<section id="linear-regression" class="level4" data-number="5.1.3.2">
+<h4 data-number="5.1.3.2" class="anchored" data-anchor-id="linear-regression"><span class="header-section-number">5.1.3.2</span> Linear regression</h4>
+<p>Several methods for performing linear regression using reducers:</p>
+<ul>
+<li>ee.Reducer.linearFit()</li>
+<li>ee.Reducer.linearRegression()</li>
+<li>ee.Reducer.robustLinearRegression()</li>
+<li>ee.Reducer.ridgeRegression()</li>
+</ul>
+<p>Purpose: View the change over time in pixel values.</p>
+</section>
+<section id="joins-use-ee.filter" class="level4" data-number="5.1.3.3">
+<h4 data-number="5.1.3.3" class="anchored" data-anchor-id="joins-use-ee.filter"><span class="header-section-number">5.1.3.3</span> Joins (use ee.Filter)</h4>
+<ul>
+<li><p>join image collections</p></li>
+<li><p>join feature collections</p></li>
+<li><p>spatial join, intersect, subset</p></li>
+</ul>
+</section>
+</section>
+<section id="practical" class="level3" data-number="5.1.4">
+<h3 data-number="5.1.4" class="anchored" data-anchor-id="practical"><span class="header-section-number">5.1.4</span> Practical</h3>
+<p>This week’s exercises will focus on reducing images and image enhancement. Reducing images can quickly reduce a collection of images to a single image using the mean, median, maximum or minimum value for further analysis. Image enhancement involves NDVI, texture measures and PCA. When the study area is large, the results of these methods can be obtained faster using GEE.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/NDVI_GEE.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">NDVI results using GEE</figcaption>
+</figure>
+</div>
+<p>This is the NDVI result using Landsat8 images from June 2021 to October 2022, and the study area is the entire Dehli area. The result clearly show that there is less vegetation coverage near the center of the region, while some small areas with more vegetation coverage appear in the south. These small areas may be nature reserves or parks.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/Texture_GEE.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Texture measure results using GEE</figcaption>
+</figure>
+</div>
+<p>This is the GLCM (Gray-level co-occurrence matrix) texture measure results of the same image. The results show some obvious areas, including airports, industrial areas, etc. These areas are scattered around the edges.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/PCA_results.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">PCA numerical results</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/PCA_GEE.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">PCA results using GEE (component 1 and 2)</figcaption>
+</figure>
+</div>
+<p>From the numerical results, it can be found that the first component explains 80% of the variance and the second component explains 13% of the variance. These two components are the most critical for the image collection. The combined image from these two components also contains most important information, such as rivers, airports, industrial areas, etc.</p>
+</section>
+</section>
+<section id="applications" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">5.2</span> Applications</h2>
+<p>GEE is a powerful platform that leverages cloud computing to process and analyze vast amounts of Earth observation data for various applications, including remote sensing. Remote sensing applications of GEE span across monitoring environmental changes, agricultural operations, geological activities, and more <span class="citation" data-cites="Pham-Duc2023">(<a href="references.html#ref-Pham-Duc2023" role="doc-biblioref">Pham-Duc <em>et al.</em>, 2023</a>)</span>.</p>
+<p>There are some notable achievements in water body research. One group of researchers developed an application for mapping inland water bodies in the country of Turkey using remote sensing data integrated into Google Earth Engine (GEE) <span class="citation" data-cites="Atay2023">(<a href="references.html#ref-Atay2023" role="doc-biblioref">Atay and Kaplan, 2023</a>)</span>. It shows that GEE is a promising application for processing large amounts of satellite data.</p>
+<p>Another group of researchers used Google Earth Engine (GEE) for mapping national inland water bodies in Croatia <span class="citation" data-cites="Gasparovic2022">(<a href="references.html#ref-Gasparovic2022" role="doc-biblioref">Gašparović, 2022</a>)</span>. And the results showed that GEE is also a very successful application for handling big satellite data and can accurately extract water bodies on a national level.</p>
+<p>In addition, a group of researchers explored the possibility of using the Google Earth Engine (GEE) platform for mapping the Trophic State Index (TSI) of an inland water body <span class="citation" data-cites="Sherjah2023">(<a href="references.html#ref-Sherjah2023" role="doc-biblioref">Sherjah, Sajikumar and Nowshaja, 2023</a>)</span>. This study illustrates that GEE can quickly help us understand a period of time. Water quality of lakes and rivers over time.</p>
+<p>Of course, GEE also has some limitations. Although GEE provides access to large amounts of geospatial data, but it does not have the data that users need, and the quality of the data it provides may vary. Additionally, processing times may vary depending on the complexity of the analysis and the size of the data. Some analyzes can also take a lot of time.</p>
+<p>One study used GEE to monitor the reconstruction of Leyte Island in the Philippines after a disaster <span class="citation" data-cites="Ghaffarian2020">(<a href="references.html#ref-Ghaffarian2020" role="doc-biblioref">Ghaffarian, Rezaie Farhadabad and Kerle, 2020</a>)</span>. This study shows that while Google Earth Engine is useful for viewing large areas, it is less suitable for viewing the details of cities because it does not have very high-resolution imagery.</p>
+</section>
+<section id="reflections" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">5.3</span> Reflections</h2>
+<p>I came across GEE this week and I have to admit that GEE saves a lot of time and has ample remote sensing data. GEE has already completed the work of storing data and configuring the development environment for me. I only need to think about what data I need and what methods to solve the problem, and then use GEE to quickly analyze. Although I spent a lot of time in the initial learning process of GEE and was not very comfortable with new tools, once I understood the entire workflow, GEE brought me great convenience.</p>
+<p>The development method using GEE is also different from the R language that was familiar before. In addition to the Javascript language, it requires users to establish a server-side development mentality. This therefore requires a change in the way you think about daily programming. However, the GEE instruction manual contains a large number of detailed tutorials with application examples, which is also helpful for beginners to learn.</p>
+<p>In addition, I feel that the way GEE presents analysis results pays more attention to the interaction process with users. We can view the analysis results using an interactive map. And there are already many great interactive applications, which also help users intuitively view and compare different results.</p>
 
 
+<div id="refs" class="references csl-bib-body" role="list" style="display: none">
+<div id="ref-Atay2023" class="csl-entry" role="listitem">
+Atay, M. A. and Kaplan, G. (2023) <span>“Large-<span>Scale Mapping</span> of <span>Inland Waters</span> with <span>Google Earth Engine Using Remote Sensing</span>,”</span> <em>Environmental Sciences Proceedings</em>, 25(1), p. 52. doi: <a href="https://doi.org/10.3390/ECWS-7-14171">10.3390/ECWS-7-14171</a>.
+</div>
+<div id="ref-Gasparovic2022" class="csl-entry" role="listitem">
+Gašparović, G. K., Mateo (2022) <span>“Large-<span>Scale Mapping</span> and <span>Monitoring Inland Waters</span> by <span>Google Earth Engine</span> and <span>Remote Sensing Techniques</span>,”</span> in <em>Geospatial <span>Information Handbook</span> for <span>Water Resources</span> and <span>Watershed Management</span>, <span>Volume I</span></em>. CRC Press.
+</div>
+<div id="ref-Ghaffarian2020" class="csl-entry" role="listitem">
+Ghaffarian, S., Rezaie Farhadabad, A. and Kerle, N. (2020) <span>“Post-<span>Disaster Recovery Monitoring</span> with <span>Google Earth Engine</span>,”</span> <em>Applied Sciences</em>, 10(13), p. 4574. doi: <a href="https://doi.org/10.3390/app10134574">10.3390/app10134574</a>.
+</div>
+<div id="ref-Googlen/d" class="csl-entry" role="listitem">
+Google (n/d) <span>“Google <span>Earth Engine</span>.”</span> Available at: <a href="https://earthengine.google.com">https://earthengine.google.com</a> (Accessed: March 4, 2024).
+</div>
+<div id="ref-GoogleForDevelopersn/d" class="csl-entry" role="listitem">
+Google for Developers (n/d) <span>“Client vs. <span>Server</span> <span></span> <span>Google Earth Engine</span> <span></span> <span>Google</span> for <span>Developers</span>.”</span> Available at: <a href="https://developers.google.com/earth-engine/guides/client_server">https://developers.google.com/earth-engine/guides/client_server</a> (Accessed: March 4, 2024).
+</div>
+<div id="ref-Hawkins2018" class="csl-entry" role="listitem">
+Hawkins, L. (2018) <span>“Server-<span>Side</span> vs <span>Client-Side Programming Languages</span>,”</span> <em>Tech Web Space</em>. Available at: <a href="https://www.techwebspace.com/server-side-vs-client-side-programming-languages/">https://www.techwebspace.com/server-side-vs-client-side-programming-languages/</a> (Accessed: March 4, 2024).
+</div>
+<div id="ref-Pham-Duc2023" class="csl-entry" role="listitem">
+Pham-Duc, B. <em>et al.</em> (2023) <span>“Trends and applications of google earth engine in remote sensing and earth science research: A bibliometric analysis using scopus database,”</span> <em>Earth Science Informatics</em>, 16(3), pp. 2355–2371. doi: <a href="https://doi.org/10.1007/s12145-023-01035-2">10.1007/s12145-023-01035-2</a>.
+</div>
+<div id="ref-Sherjah2023" class="csl-entry" role="listitem">
+Sherjah, P. Y., Sajikumar, N. and Nowshaja, P. T. (2023) <span>“Quality monitoring of inland water bodies using <span>Google Earth Engine</span>,”</span> <em>Journal of Hydroinformatics</em>, 25(2), pp. 432–450. doi: <a href="https://doi.org/10.2166/hydro.2023.137">10.2166/hydro.2023.137</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -556,10 +691,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./Week_4.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Policy applications</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Week_1.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1 - An Introduction to Remote Sensing</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
