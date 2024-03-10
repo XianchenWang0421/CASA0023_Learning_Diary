@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>CASA0023 Learning Diary - 6&nbsp; Week 6 - Classification</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./Week_5.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week_6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6 - Classification</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">CASA0023 Learning Diary</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1 - An Introduction to Remote Sensing</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2 - Portfolio tools: Quarto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Remote sensing data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Policy applications</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5 - An introduction to Google Earth Engine</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_6.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6 - Classification</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> Summary</a>
+  <ul class="collapse">
+  <li><a href="#use-of-categorical-data" id="toc-use-of-categorical-data" class="nav-link" data-scroll-target="#use-of-categorical-data"><span class="header-section-number">6.1.1</span> Use of categorical data</a></li>
+  <li><a href="#classification-methods-of-remote-sensing-data" id="toc-classification-methods-of-remote-sensing-data" class="nav-link" data-scroll-target="#classification-methods-of-remote-sensing-data"><span class="header-section-number">6.1.2</span> Classification methods of remote sensing data</a></li>
+  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical"><span class="header-section-number">6.1.3</span> Practical</a></li>
+  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">6.2</span> Applications</a></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">6.3</span> Reflections</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6 - Classification</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="summary" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
+<p>This week’s content is mainly about the classification of remote sensing data, including application scenarios, methodologies, etc.</p>
+<section id="use-of-categorical-data" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="use-of-categorical-data"><span class="header-section-number">6.1.1</span> Use of categorical data</h3>
+<section id="air-pollution-monitoring" class="level4" data-number="6.1.1.1">
+<h4 data-number="6.1.1.1" class="anchored" data-anchor-id="air-pollution-monitoring"><span class="header-section-number">6.1.1.1</span> Air pollution monitoring</h4>
+<p>Remote sensing data can monitor pollutants in the atmosphere, such as sulfur dioxide (SO2), nitrogen oxides (NOx), ozone (O3), particulate matter (PM2.5 and PM10), etc. By analyzing remote sensing images, pollution sources can be identified, pollution spread can be monitored, air quality can be assessed, and recommendations can be provided for policy development.</p>
+</section>
+<section id="land-use-analysis" class="level4" data-number="6.1.1.2">
+<h4 data-number="6.1.1.2" class="anchored" data-anchor-id="land-use-analysis"><span class="header-section-number">6.1.1.2</span> Land use analysis</h4>
+<p>Classification of remote sensing data can be applied to land cover, which is helpful for identifying and classifying the natural state of the land surface and the state changed by human activities. In terms of change detection, changes in land cover and land use, such as urban expansion, deforestation, farmland conversion, etc., are identified by comparing remote sensing images at different time points. In terms of planning and management, remote sensing data can provide scientific basis for urban planning, natural resource management, environmental protection, etc. In addition, remote sensing data classification can also be used for forest resource survey, forest health assessment, fire monitoring and forest pest and disease detection.</p>
+</section>
+<section id="the-importance-of-remote-sensing-data-classification" class="level4" data-number="6.1.1.3">
+<h4 data-number="6.1.1.3" class="anchored" data-anchor-id="the-importance-of-remote-sensing-data-classification"><span class="header-section-number">6.1.1.3</span> The importance of remote sensing data classification</h4>
+<p>The importance of remote sensing data classification lies in its ability to transform large amounts of data collected from remote sensing equipment into useful information, which is crucial for environmental monitoring, resource management, urban planning, agriculture, disaster response and many other fields.</p>
+</section>
+</section>
+<section id="classification-methods-of-remote-sensing-data" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="classification-methods-of-remote-sensing-data"><span class="header-section-number">6.1.2</span> Classification methods of remote sensing data</h3>
+<p>Remote sensing data classification is the process of assigning pixels in remote sensing images to different categories (such as water bodies, forests, cities, etc.). The methods mainly involve expert systems, machine learning, and deep learning methods. This week we will focus on some classic machine learning methods.</p>
+<p>First let’s look at supervised learning. Supervised classification refers to using samples (training sets) of known categories to guide the classification process.</p>
+<section id="classification-and-regression-trees-cart" class="level4" data-number="6.1.2.1">
+<h4 data-number="6.1.2.1" class="anchored" data-anchor-id="classification-and-regression-trees-cart"><span class="header-section-number">6.1.2.1</span> Classification and regression trees (CART)</h4>
+<p>CART can be used to solve classification problems (i.e., predict the value of a discrete variable) and regression problems (i.e., predict the value of a continuous variable). It works by recursively splitting a data set into smaller subsets while building nodes of a decision tree for each subset.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/CART.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Classification and regression trees <span class="citation" data-cites="Ye2020">(<a href="references.html#ref-Ye2020" role="doc-biblioref">Ye, 2020</a>)</span></figcaption>
+</figure>
+</div>
+<section id="working-principle" class="level5" data-number="6.1.2.1.1">
+<h5 data-number="6.1.2.1.1" class="anchored" data-anchor-id="working-principle"><span class="header-section-number">6.1.2.1.1</span> Working principle</h5>
+<ol type="1">
+<li><p>Select the best split point: The CART algorithm starts from the root node and selects the best split point to split the data set into two subsets. The criterion for choosing the split point is to maximize the increase in purity of the two subsets (for classification problems) or to minimize the mean square error (for regression problems).</p></li>
+<li><p>Recursive splitting: Repeat step 1 for each generated subset until a stopping condition is met, such as the node reaching the minimum number of samples, the tree reaching the maximum depth, or the subset can no longer further improve purity or reduce error.</p></li>
+<li><p>Pruning: In order to avoid overfitting, the CART algorithm will simplify the decision tree through pruning. Pruning can be done after the tree is fully grown (post-pruning) or while the tree is growing (pre-pruning). The purpose of pruning is to remove nodes that do not contribute significantly to the model’s predictive ability.</p></li>
+</ol>
+</section>
+<section id="classification-and-regression" class="level5" data-number="6.1.2.1.2">
+<h5 data-number="6.1.2.1.2" class="anchored" data-anchor-id="classification-and-regression"><span class="header-section-number">6.1.2.1.2</span> Classification and regression</h5>
+<ul>
+<li><p>Classification tree: When the target variable is discrete, CART generates a classification tree. At each leaf node, it gives a category as the prediction result. Criteria commonly used by classification trees when selecting split points include gini impurity and information gain.</p></li>
+<li><p>Regression tree: When the target variable is continuous, CART generates a regression tree. At each leaf node, it will give a numerical value as the prediction result. The criterion commonly used by regression trees when selecting split points is minimizing the mean square error (MSE).</p></li>
+</ul>
+</section>
+</section>
+<section id="random-forests" class="level4" data-number="6.1.2.2">
+<h4 data-number="6.1.2.2" class="anchored" data-anchor-id="random-forests"><span class="header-section-number">6.1.2.2</span> Random forests</h4>
+<p>Random Forests are used to solve classification and regression problems. It is a type of ensemble learning method that makes the final decision by building multiple decision trees and summarizing their prediction results. The core idea of the random forest algorithm is “collective intelligence”. A single decision tree may not be accurate or stable enough to predict the data, but combining the prediction results of multiple decision trees can significantly improve the accuracy and robustness of the prediction.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/Random_Forests.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Random forests <span class="citation" data-cites="Aggiwal2017">(<a href="references.html#ref-Aggiwal2017" role="doc-biblioref">Aggiwal, 2017</a>)</span></figcaption>
+</figure>
+</div>
+<section id="working-principle-1" class="level5" data-number="6.1.2.2.1">
+<h5 data-number="6.1.2.2.1" class="anchored" data-anchor-id="working-principle-1"><span class="header-section-number">6.1.2.2.1</span> Working principle</h5>
+<ol type="1">
+<li><p>Bootstrap sampling: Randomly select N samples from the original data set as a training set for a decision tree. This process is repeated to generate different training data sets for each decision tree.</p></li>
+<li><p>Build a decision tree: For each decision tree when splitting at each node, a certain number of features are randomly selected from all features, and then the best splitting feature and split point are selected. This practice increases diversity among decision trees.</p></li>
+<li><p>Training of decision trees: Each decision tree is trained independently on its corresponding training set until each leaf node is pure or reaches the minimum number of node samples, usually without pruning.</p></li>
+<li><p>Aggregated prediction results: For classification problems, random forests work through a “voting” mechanism, that is, each decision tree gives a prediction result, and the final result is the category with the most votes among all tree predictions. For regression problems, random forests averages the predictions of all decision trees as the final prediction.</p></li>
+</ol>
+</section>
+<section id="advantages-and-disadvantages" class="level5" data-number="6.1.2.2.2">
+<h5 data-number="6.1.2.2.2" class="anchored" data-anchor-id="advantages-and-disadvantages"><span class="header-section-number">6.1.2.2.2</span> Advantages and disadvantages</h5>
+<p>Advantage:</p>
+<ul>
+<li><p>High accuracy: Random forests often provide high accuracy by integrating multiple decision trees.</p></li>
+<li><p>Resistance to overfitting: Compared with a single decision tree, a random forest is less likely to be overfitted.</p></li>
+<li><p>Flexibility: Able to handle classification and regression tasks, suitable for both continuous and categorical variables.</p></li>
+<li><p>Provide feature importance evaluation: being able to evaluate the contribution of each feature to the model and it is helpful for feature selection.</p></li>
+</ul>
+<p>Disadvantages:</p>
+<ul>
+<li><p>Poor model interpretability: Because random forest involves multiple decision trees, its prediction process is not as intuitive and easy to understand as a single decision tree.</p></li>
+<li><p>Training and prediction speed: Random forests require more computing resources and time than a single decision tree, especially when working with large-scale data sets.</p></li>
+</ul>
+</section>
+</section>
+<section id="maximum-likelihood-classification-mlc" class="level4" data-number="6.1.2.3">
+<h4 data-number="6.1.2.3" class="anchored" data-anchor-id="maximum-likelihood-classification-mlc"><span class="header-section-number">6.1.2.3</span> Maximum likelihood classification (MLC)</h4>
+<p>Maximum likelihood classification (MLC) is based on statistical principles and makes classification decisions by estimating the probability of generating observed data for each category.</p>
+<p>Working principle: For a given pixel, the maximum likelihood classification algorithm calculates the probability that it belongs to each possible class and classifies the pixel into the class with the highest probability.</p>
+<section id="advantages-and-disadvantages-1" class="level5" data-number="6.1.2.3.1">
+<h5 data-number="6.1.2.3.1" class="anchored" data-anchor-id="advantages-and-disadvantages-1"><span class="header-section-number">6.1.2.3.1</span> Advantages and disadvantages</h5>
+<p>Advantages:</p>
+<ul>
+<li><p>Solid theoretical foundation: Based on statistical principles, it has a solid theoretical foundation and can effectively and clearly explain the classification results.</p></li>
+<li><p>Wide applicability: suitable for various remote sensing data and various types of classification problems.</p></li>
+</ul>
+<p>Disadvantages:</p>
+<ul>
+<li><p>Normal distribution assumption: MLC assumes that the data are multivariate normally distributed within each category, which may not always hold true in practical applications.</p></li>
+<li><p>Computational complexity: For data with higher feature dimensions, the computational complexity of MLC is higher.</p></li>
+<li><p>Dependence on training samples: The performance of MLC relies heavily on high quality training samples. If the training samples are insufficient or unrepresentative, the classification results may be inaccurate.</p></li>
+</ul>
+</section>
+</section>
+<section id="support-vector-machine-svm" class="level4" data-number="6.1.2.4">
+<h4 data-number="6.1.2.4" class="anchored" data-anchor-id="support-vector-machine-svm"><span class="header-section-number">6.1.2.4</span> Support vector machine (SVM)</h4>
+<p>Support vector machines (SVM) is a powerful supervised learning algorithm used for classification and regression problems. SVM looks for the best decision boundary in a high-dimensional space. This decision boundary is called a maximum-margin hyperplane. It aims to maximize the margin between different categories, thus providing optimal category separation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/SVM.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Support vector machine <span class="citation" data-cites="SatyaMallick2018">(<a href="references.html#ref-SatyaMallick2018" role="doc-biblioref">Satya Mallick, 2018</a>)</span></figcaption>
+</figure>
+</div>
+<section id="working-principle-2" class="level5" data-number="6.1.2.4.1">
+<h5 data-number="6.1.2.4.1" class="anchored" data-anchor-id="working-principle-2"><span class="header-section-number">6.1.2.4.1</span> Working principle</h5>
+<ul>
+<li><p>Maximum Margin: SVM attempts to find a hyperplane that maximizes the distance between the nearest data points (support vectors) from different categories.</p></li>
+<li><p>Support vector: The determination of the decision boundary only relies on the data points closest to the boundary, which are called support vectors.</p></li>
+<li><p>Linear and non-linear classification: In the case of linear separability, SVM finds a straight line (in two-dimensional space), plane (in three-dimensional space) or hyperplane (in higher-dimensional space) to separate different categories. For nonlinearly separable data, SVM uses a kernel function to map the data to a higher-dimensional space. In this new space, the data may be linearly separable.</p></li>
+<li><p>Kernel function is the key to SVM processing nonlinear problems. Commonly used kernel functions include:</p>
+<ul>
+<li><p>Linear kernel: Used for linearly separable data.</p></li>
+<li><p>Polynomial kernel: Can map data to high-dimensional space and is suitable for nonlinear problems.</p></li>
+<li><p>Radial basis function kernel (RBF, also known as Gaussian kernel): Can handle various nonlinear problems.</p></li>
+<li><p>Sigmoid kernel: Similar to the activation function in neural networks.</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="advantages-and-disadvantages-2" class="level5" data-number="6.1.2.4.2">
+<h5 data-number="6.1.2.4.2" class="anchored" data-anchor-id="advantages-and-disadvantages-2"><span class="header-section-number">6.1.2.4.2</span> Advantages and disadvantages</h5>
+<p>Advantages:</p>
+<ul>
+<li><p>Strong generalization ability: SVM has shown good generalization ability in many practical problems, that is, it can make accurate predictions on unseen data.</p></li>
+<li><p>Suitable for high-dimensional data: SVM works well when dealing with high-dimensional feature spaces and can work effectively even when the number of features is greater than the number of samples.</p></li>
+<li><p>Suitable for small sample data: SVM can also show good performance on small sample datasets.</p></li>
+<li><p>Flexibility: By choosing an appropriate kernel function, SVM can be used to solve various types of nonlinear problems.</p></li>
+</ul>
+<p>Disadvantages:</p>
+<ul>
+<li><p>Parameter selection and tuning: The performance of SVM depends largely on the selection of kernel functions and parameter tuning, which requires fine adjustments.</p></li>
+<li><p>Computational cost: For large-scale data sets, training of SVM can be very time-consuming, especially when complex kernel functions are chosen.</p></li>
+<li><p>Interpretability: The decision-making logic of the SVM model is not as intuitive and easy to understand as the decision tree, and the model has poor interpretability.</p></li>
+</ul>
+</section>
+</section>
+<section id="now-lets-look-at-unsupervised-learning" class="level4" data-number="6.1.2.5">
+<h4 data-number="6.1.2.5" class="anchored" data-anchor-id="now-lets-look-at-unsupervised-learning"><span class="header-section-number">6.1.2.5</span> Now let’s look at unsupervised learning</h4>
+<p>Unsupervised classification does not rely on training samples but identifies patterns and categories directly from the data.</p>
+<p>Common unsupervised classification algorithms include:</p>
+<ul>
+<li><p>K-means Clustering</p></li>
+<li><p>DBSCAN and HDBSCAN</p></li>
+<li><p>Iterative self-organizing data analysis (ISODATA): It is an improvement of K-means, allowing the number of categories to be merged and split during the iterative process, and more flexibly handles complex data.</p></li>
+</ul>
+</section>
+<section id="conclusion" class="level4" data-number="6.1.2.6">
+<h4 data-number="6.1.2.6" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">6.1.2.6</span> Conclusion</h4>
+<p>In practical applications, in order to improve the accuracy and reliability of classification, multiple methods are often used in combination. The choice of method for classifying remote sensing data depends on the specific application requirements, data type and available resources.</p>
+</section>
+</section>
+<section id="practical" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="practical"><span class="header-section-number">6.1.3</span> Practical</h3>
+<p>For this week’s practical, CART, Random forests, and K-means methods were mainly used to classify remote sensing data.</p>
+<p>The remote sensing data uses Landsat 8 data, the location is Milan, Italy, and the time is from 01/01/2019 to 01/01/2020.</p>
+<section id="first-use-two-supervised-learning-methods" class="level4" data-number="6.1.3.1">
+<h4 data-number="6.1.3.1" class="anchored" data-anchor-id="first-use-two-supervised-learning-methods"><span class="header-section-number">6.1.3.1</span> First use two supervised learning methods</h4>
+<p>Each land cover category in the image is labeled as follows:</p>
+<ul>
+<li>Forest: 0</li>
+<li>Developed: 1</li>
+<li>Water: 2</li>
+<li>Herbaceous: 3</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/CART-result.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">CART classification result</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/RF-result.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Random forests classification result</figcaption>
+</figure>
+</div>
+<p>By comparing the results of CART and random forests, it can be found that random forests are more accurate for forest classification, and the results of other categories are roughly the same. Since the dataset is manually labeled and contains only a small number of samples, collecting more training data, selecting appropriate hyperparameters, and adding more predictor variables (such as spectral indices) can lead to better classification results.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/RF-Accuracy-Assessment.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Random forests classification accuracy assessment result</figcaption>
+</figure>
+</div>
+<p>It can be seen from the statistical information extracted from the confusion matrix that the classification results of random forests are relatively ideal, but there are still a small number of samples belonging to the herbaceous category that are identified as the developed category.</p>
+</section>
+<section id="and-then-use-an-unsupervised-learning-method" class="level4" data-number="6.1.3.2">
+<h4 data-number="6.1.3.2" class="anchored" data-anchor-id="and-then-use-an-unsupervised-learning-method"><span class="header-section-number">6.1.3.2</span> And then use an unsupervised learning method</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/K-means-result.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">K-means classification result</figcaption>
+</figure>
+</div>
+<p>Since the unsupervised method cannot correspond the classification results to each category, from the results, yellow indicates forest, blue indicates water, dark yellow indicates herbaceous, and pink indicates developed.</p>
+</section>
+</section>
+</section>
+<section id="applications" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">6.2</span> Applications</h2>
+<p>Machine learning methods have been widely used to classify remote sensing data.</p>
+<p>One study <span class="citation" data-cites="Saini2023">(<a href="references.html#ref-Saini2023" role="doc-biblioref">Saini and Rawat, 2023</a>)</span> used machine learning methods to classify different types of land in remotely sensed images. Four machine learning methods were specifically tested in the Nanital district of India using high quality satellite imagery. This study found the random forest method to be the most accurate, followed by support vector machines, K-nearest neighbors, and artificial neural networks. But the study only tested four machine learning techniques, and there may be other ways to do better classification. And it only focuses on a single region of India, meaning the results may be different in other places with different landscapes or weather conditions. In addition, the study used satellite data with a resolution of 10m, which is very detailed, but there may still be small changes on the land that these data cannot show.</p>
+<p>Another study <span class="citation" data-cites="Ahmad2020">(<a href="references.html#ref-Ahmad2020" role="doc-biblioref">Ahmad <em>et al.</em>, 2020</a>)</span> aimed to classify vegetation into different types and categories and compared their effectiveness in vegetation classification using three machine learning methods, namely K-means, support vector machine and artificial neural network. The study found that both supervised and unsupervised algorithms can be effective for vegetation classification, with each algorithm having its own advantages. However, the study did not discuss the accuracy and reliability of machine learning algorithms under different environmental conditions, which may affect the classification results. Temporal changes in vegetation are also not taken into account, which could lead to misclassification due to seasonal changes or agricultural practices. Furthermore, information on the computational resources required by the algorithm is not discussed, which is very important for practical applications, especially in areas with limited computational infrastructure.</p>
+<p>In addition to comparing different machine learning methods, there is also a study <span class="citation" data-cites="Alimjan2018">(<a href="references.html#ref-Alimjan2018" role="doc-biblioref">Alimjan <em>et al.</em>, 2018</a>)</span> that proposes a new method that combines support vector machines (SVM) and k-nearest neighbors (KNN). The study improves the accuracy of classifying remote sensing images by simultaneously using the separation power of SVM and the local insight of KNN. A special distance formula that takes into account brightness and orientation also helps in making better classification decisions for images. But this study has not yet discussed how the new method performs when dealing with very large data sets, which may be important for practical applications of remote sensing. Furthermore, this new method has not been compared in detail with other existing methods, making it difficult to measure its performance.</p>
+<p>In addition to traditional machine learning methods, more research [<span class="citation" data-cites="Vatsalya2023">Vatsalya (<a href="references.html#ref-Vatsalya2023" role="doc-biblioref">2023</a>)</span>;<span class="citation" data-cites="Li2019a">Li, Liu and Zhang (<a href="references.html#ref-Li2019a" role="doc-biblioref">2019</a>)</span>;<span class="citation" data-cites="Liu2018">Liu (<a href="references.html#ref-Liu2018" role="doc-biblioref">2018</a>)</span>;] currently uses deep learning methods to analyze remote sensing images. These studies all believe that using deep learning methods to classify remote sensing images is more effective and has higher accuracy. However, deep learning methods are not suitable for applications in systems with limited resources. And it is very dependent on the dataset, so there are still shortcomings in model generalization.</p>
+<p>In summary, whether machine learning or deep learning methods are used, it depends on the specific problem and goal of the research. Each method has advantages and disadvantages, and there is always no best method.</p>
+</section>
+<section id="reflections" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">6.3</span> Reflections</h2>
+<p>Remote sensing data classification is the process of assigning pixels in remote sensing images to different categories or themes. These categories usually represent different features of the land surface, such as vegetation, water bodies, urban buildings, etc. Effective remote sensing data classification is crucial for environmental monitoring, resource management, urban planning, agriculture, disaster management and other fields.</p>
+<p>There are currently many classification methods, from machine learning to deep learning, and from supervised learning to unsupervised learning. The results of these powerful methods also provide evidence support for policy formulation and improvement. As more and more novel methods come into view, I think it is necessary to constantly reflect on the strengths and limitations of these methods and to look at these technologies with a critical eye. In addition, since these methods are very dependent on data sources, we also need to review the quality of our data, select appropriate variables, and try our best to explore interpretability of the method. When studying practical problems, fully thinking from the aspects of data, methods, background, etc. is a reasonable way to solve the problem.</p>
+<p>This week I learned the principles of many methods and practiced some of them, which gave me a clear understanding of various practical applications of remote sensing data classification.</p>
+
+
+<div id="refs" class="references csl-bib-body" role="list" style="display: none">
+<div id="ref-Aggiwal2017" class="csl-entry" role="listitem">
+Aggiwal, R. (2017) <span>“Introduction to <span>Random</span> forest <span></span> <span>Blog</span> <span></span> <span>Dimensionless</span>,”</span> <em>DIMENSIONLESS TECHNOLOGIES PVT.LTD.</em> Available at: <a href="https://dimensionless.in/introduction-to-random-forest/">https://dimensionless.in/introduction-to-random-forest/</a> (Accessed: March 10, 2024).
+</div>
+<div id="ref-Ahmad2020" class="csl-entry" role="listitem">
+Ahmad, A. M. <em>et al.</em> (2020) <span>“Remote <span>Sensing Based Vegetation Classification Using Machine Learning Algorithms</span>,”</span> in <em>2019 <span>International Conference</span> on <span>Advances</span> in the <span>Emerging Computing Technologies</span> (<span>AECT</span>)</em>, pp. 1–6. doi: <a href="https://doi.org/10.1109/AECT47998.2020.9194217">10.1109/AECT47998.2020.9194217</a>.
+</div>
+<div id="ref-Alimjan2018" class="csl-entry" role="listitem">
+Alimjan, G. <em>et al.</em> (2018) <span>“A <span>New Technique</span> for <span>Remote Sensing Image Classification Based</span> on <span>Combinatorial Algorithm</span> of <span>SVM</span> and <span>KNN</span>,”</span> <em>International Journal of Pattern Recognition and Artificial Intelligence</em>, 32(07), p. 1859012. doi: <a href="https://doi.org/10.1142/S0218001418590127">10.1142/S0218001418590127</a>.
+</div>
+<div id="ref-Li2019a" class="csl-entry" role="listitem">
+Li, Y., Liu, M. and Zhang, S. (2019) <span>“Classification of <span>Optical Remote Sensing Images Based</span> on <span>Convolutional Neural Network</span>,”</span> in <em>2019 6th <span>International Conference</span> on <span>Control</span>, <span>Decision</span> and <span>Information Technologies</span> (<span>CoDIT</span>)</em>, pp. 801–806. doi: <a href="https://doi.org/10.1109/CoDIT.2019.8820307">10.1109/CoDIT.2019.8820307</a>.
+</div>
+<div id="ref-Liu2018" class="csl-entry" role="listitem">
+Liu, J. (2018) <span>“Deep <span>Learning-Based Classification</span> of <span>Remote Sensing Image</span>,”</span> <em>Journal of Computers</em>, pp. 44–48. doi: <a href="https://doi.org/10.17706/jcp.13.1.44-48">10.17706/jcp.13.1.44-48</a>.
+</div>
+<div id="ref-Saini2023" class="csl-entry" role="listitem">
+Saini, R. and Rawat, S. (2023) <span>“Land <span>Use Land Cover Classification</span> in <span>Remote Sensing Using Machine Learning Techniques</span>,”</span> in <em>2023 1st <span>International Conference</span> on <span>Innovations</span> in <span>High Speed Communication</span> and <span>Signal Processing</span> (<span>IHCSP</span>)</em>, pp. 99–104. doi: <a href="https://doi.org/10.1109/IHCSP56702.2023.10127126">10.1109/IHCSP56702.2023.10127126</a>.
+</div>
+<div id="ref-SatyaMallick2018" class="csl-entry" role="listitem">
+Satya Mallick (2018) <span>“Support <span>Vector Machines</span> (<span>SVM</span>) <span></span> <span>LearnOpenCV</span> #.”</span> Available at: <a href="https://learnopencv.com/support-vector-machines-svm/">https://learnopencv.com/support-vector-machines-svm/</a> (Accessed: March 10, 2024).
+</div>
+<div id="ref-Vatsalya2023" class="csl-entry" role="listitem">
+Vatsalya, S. (2023) <span>“Remote <span>Sensing Image Classification</span> using <span>Machine Learning Algorithms</span>,”</span> <em>International Journal for Research in Applied Science and Engineering Technology</em>, 11(6), pp. 2343–2349. doi: <a href="https://doi.org/10.22214/ijraset.2023.54049">10.22214/ijraset.2023.54049</a>.
+</div>
+<div id="ref-Ye2020" class="csl-entry" role="listitem">
+Ye, A. (2020) <span>“5 <span>Regression Algorithms You Need</span> to <span>Know</span> — <span>Theory</span> &amp; <span>Implementation</span>,”</span> <em>Analytics Vidhya</em>. Available at: <a href="https://medium.com/analytics-vidhya/5-regression-algorithms-you-need-to-know-theory-implementation-37993382122d">https://medium.com/analytics-vidhya/5-regression-algorithms-you-need-to-know-theory-implementation-37993382122d</a> (Accessed: March 10, 2024).
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Week_5.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5 - An introduction to Google Earth Engine</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

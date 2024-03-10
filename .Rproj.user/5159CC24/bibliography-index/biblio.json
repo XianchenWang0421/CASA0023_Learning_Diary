@@ -1,6 +1,137 @@
 {
     "sources": [
         {
+            "URL": "https://dimensionless.in/introduction-to-random-forest/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Aggiwal",
+                    "given": "Raghav"
+                }
+            ],
+            "container-title": "DIMENSIONLESS TECHNOLOGIES PVT.LTD.",
+            "id": "Aggiwal2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        2
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "Introduction to Random forest  Blog  Dimensionless",
+            "type": ""
+        },
+        {
+            "DOI": "10.1109/AECT47998.2020.9194217",
+            "URL": "https://ieeexplore.ieee.org/document/9194217",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Ahmad",
+                    "given": "Arbab Mansoor"
+                },
+                {
+                    "family": "Minallah",
+                    "given": "Nasru"
+                },
+                {
+                    "family": "Ahmed",
+                    "given": "Nasir"
+                },
+                {
+                    "family": "Ahmad",
+                    "given": "Arbab Masood"
+                },
+                {
+                    "family": "Fazal",
+                    "given": "Nouman"
+                }
+            ],
+            "container-title": "2019 International Conference on Advances in the Emerging Computing Technologies (AECT)",
+            "id": "Ahmad2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        2
+                    ]
+                ]
+            },
+            "page": "1-6",
+            "title": "Remote Sensing Based Vegetation Classification Using Machine Learning Algorithms",
+            "type": "paper-conference"
+        },
+        {
+            "DOI": "10.1142/S0218001418590127",
+            "ISSN": "0218-0014",
+            "URL": "https://www.worldscientific.com/doi/abs/10.1142/S0218001418590127",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Alimjan",
+                    "given": "Gulnaz"
+                },
+                {
+                    "family": "Sun",
+                    "given": "Tieli"
+                },
+                {
+                    "family": "Liang",
+                    "given": "Yi"
+                },
+                {
+                    "family": "Jumahun",
+                    "given": "Hurxida"
+                },
+                {
+                    "family": "Guan",
+                    "given": "Yu"
+                }
+            ],
+            "container-title": "International Journal of Pattern Recognition and Artificial Intelligence",
+            "id": "Alimjan2018",
+            "issue": "07",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        7
+                    ]
+                ]
+            },
+            "page": "1859012",
+            "publisher": "World Scientific Publishing Co.",
+            "title": "A New Technique for Remote Sensing Image Classification Based on Combinatorial Algorithm of SVM and KNN",
+            "type": "article-journal",
+            "volume": "32"
+        },
+        {
             "DOI": "10.3390/ECWS-7-14171",
             "ISSN": "2673-4931",
             "URL": "https://www.mdpi.com/2673-4931/25/1/52",
@@ -822,6 +953,47 @@
             "type": "book"
         },
         {
+            "DOI": "10.1109/CoDIT.2019.8820307",
+            "ISSN": "2576-3555",
+            "URL": "https://ieeexplore.ieee.org/document/8820307",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Li",
+                    "given": "Yibo"
+                },
+                {
+                    "family": "Liu",
+                    "given": "Mingjun"
+                },
+                {
+                    "family": "Zhang",
+                    "given": "Senyue"
+                }
+            ],
+            "container-title": "2019 6th International Conference on Control, Decision and Information Technologies (CoDIT)",
+            "id": "Li2019a",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        4
+                    ]
+                ]
+            },
+            "page": "801-806",
+            "title": "Classification of Optical Remote Sensing Images Based on Convolutional Neural Network",
+            "type": "paper-conference"
+        },
+        {
             "DOI": "10.1109/CISP.2009.5304005",
             "URL": "https://ieeexplore.ieee.org/document/5304005",
             "accessed": {
@@ -856,6 +1028,38 @@
             "page": "1-5",
             "title": "Using Tasseled Cap Transformation of CBERS-02 Images to Detect Dieback or Dead Robinia Pseudoacacia Plantation",
             "type": "paper-conference"
+        },
+        {
+            "DOI": "10.17706/jcp.13.1.44-48",
+            "ISSN": "1796203X",
+            "URL": "http://www.jcomputers.us/index.php?m=content&c=index&a=show&catid=193&id=2752",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Liu",
+                    "given": "Jian-min"
+                }
+            ],
+            "container-title": "Journal of Computers",
+            "id": "Liu2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "page": "44-48",
+            "title": "Deep Learning-Based Classification of Remote Sensing Image",
+            "type": "article-journal"
         },
         {
             "DOI": "10.1109/CISP-BMEI48845.2019.8966053",
@@ -1162,6 +1366,71 @@
             "type": ""
         },
         {
+            "DOI": "10.1109/IHCSP56702.2023.10127126",
+            "URL": "https://ieeexplore.ieee.org/document/10127126",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Saini",
+                    "given": "Rashmi"
+                },
+                {
+                    "family": "Rawat",
+                    "given": "Shivam"
+                }
+            ],
+            "container-title": "2023 1st International Conference on Innovations in High Speed Communication and Signal Processing (IHCSP)",
+            "id": "Saini2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        3
+                    ]
+                ]
+            },
+            "page": "99-104",
+            "title": "Land Use Land Cover Classification in Remote Sensing Using Machine Learning Techniques",
+            "type": "paper-conference"
+        },
+        {
+            "URL": "https://learnopencv.com/support-vector-machines-svm/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Satya Mallick"
+                }
+            ],
+            "id": "SatyaMallick2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018,
+                        7
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "Support Vector Machines (SVM)  LearnOpenCV #",
+            "type": ""
+        },
+        {
             "DOI": "10.2166/hydro.2023.137",
             "ISSN": "1464-7141",
             "URL": "https://doi.org/10.2166/hydro.2023.137",
@@ -1391,6 +1660,42 @@
             "type": ""
         },
         {
+            "DOI": "10.22214/ijraset.2023.54049",
+            "ISSN": "23219653",
+            "URL": "https://www.ijraset.com/best-journal/remote-sensing-image-classification-using-machine-learning-algorithm",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Vatsalya",
+                    "given": "Samarth"
+                }
+            ],
+            "container-title": "International Journal for Research in Applied Science and Engineering Technology",
+            "id": "Vatsalya2023",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        6
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "2343-2349",
+            "title": "Remote Sensing Image Classification using Machine Learning Algorithms",
+            "type": "article-journal",
+            "volume": "11"
+        },
+        {
             "URL": "https://www.semanticscholar.org/paper/Recognition-of-Water-Bodies-from-Remotely-Sensed-by-Wang-Zhu/e9bfbfb9b558e0fccb5f49a51fdc24d558bef220",
             "accessed": {
                 "date-parts": [
@@ -1445,6 +1750,37 @@
             },
             "language": "en-US",
             "title": "WHO Guidelines",
+            "type": ""
+        },
+        {
+            "URL": "https://medium.com/analytics-vidhya/5-regression-algorithms-you-need-to-know-theory-implementation-37993382122d",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Ye",
+                    "given": "Andre"
+                }
+            ],
+            "container-title": "Analytics Vidhya",
+            "id": "Ye2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        11
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "5 Regression Algorithms You Need to Know — Theory & Implementation",
             "type": ""
         },
         {
