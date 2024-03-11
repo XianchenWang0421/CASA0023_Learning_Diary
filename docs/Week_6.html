@@ -49,7 +49,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./Week_7.html" rel="next">
 <link href="./Week_5.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -172,6 +172,12 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Week_7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 7 - Classification II</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -240,12 +246,12 @@ div.csl-indent {
 <p>Remote sensing data classification is the process of assigning pixels in remote sensing images to different categories (such as water bodies, forests, cities, etc.). The methods mainly involve expert systems, machine learning, and deep learning methods. This week we will focus on some classic machine learning methods.</p>
 <p>First let’s look at supervised learning. Supervised classification refers to using samples (training sets) of known categories to guide the classification process.</p>
 <section id="classification-and-regression-trees-cart" class="level4" data-number="6.1.2.1">
-<h4 data-number="6.1.2.1" class="anchored" data-anchor-id="classification-and-regression-trees-cart"><span class="header-section-number">6.1.2.1</span> Classification and regression trees (CART)</h4>
+<h4 data-number="6.1.2.1" class="anchored" data-anchor-id="classification-and-regression-trees-cart"><span class="header-section-number">6.1.2.1</span> Classification and Regression Trees (CART)</h4>
 <p>CART can be used to solve classification problems (i.e., predict the value of a discrete variable) and regression problems (i.e., predict the value of a continuous variable). It works by recursively splitting a data set into smaller subsets while building nodes of a decision tree for each subset.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figure/CART.png" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Classification and regression trees <span class="citation" data-cites="Ye2020">(<a href="references.html#ref-Ye2020" role="doc-biblioref">Ye, 2020</a>)</span></figcaption>
+<figcaption class="figure-caption">Classification and Regression Trees <span class="citation" data-cites="Ye2020">(<a href="references.html#ref-Ye2020" role="doc-biblioref">Ye, 2020</a>)</span></figcaption>
 </figure>
 </div>
 <section id="working-principle" class="level5" data-number="6.1.2.1.1">
@@ -265,12 +271,12 @@ div.csl-indent {
 </section>
 </section>
 <section id="random-forests" class="level4" data-number="6.1.2.2">
-<h4 data-number="6.1.2.2" class="anchored" data-anchor-id="random-forests"><span class="header-section-number">6.1.2.2</span> Random forests</h4>
+<h4 data-number="6.1.2.2" class="anchored" data-anchor-id="random-forests"><span class="header-section-number">6.1.2.2</span> Random Forests</h4>
 <p>Random Forests are used to solve classification and regression problems. It is a type of ensemble learning method that makes the final decision by building multiple decision trees and summarizing their prediction results. The core idea of the random forest algorithm is “collective intelligence”. A single decision tree may not be accurate or stable enough to predict the data, but combining the prediction results of multiple decision trees can significantly improve the accuracy and robustness of the prediction.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figure/Random_Forests.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Random forests <span class="citation" data-cites="Aggiwal2017">(<a href="references.html#ref-Aggiwal2017" role="doc-biblioref">Aggiwal, 2017</a>)</span></figcaption>
+<figcaption class="figure-caption">Random Forests <span class="citation" data-cites="Aggiwal2017">(<a href="references.html#ref-Aggiwal2017" role="doc-biblioref">Aggiwal, 2017</a>)</span></figcaption>
 </figure>
 </div>
 <section id="working-principle-1" class="level5" data-number="6.1.2.2.1">
@@ -279,7 +285,7 @@ div.csl-indent {
 <li><p>Bootstrap sampling: Randomly select N samples from the original data set as a training set for a decision tree. This process is repeated to generate different training data sets for each decision tree.</p></li>
 <li><p>Build a decision tree: For each decision tree when splitting at each node, a certain number of features are randomly selected from all features, and then the best splitting feature and split point are selected. This practice increases diversity among decision trees.</p></li>
 <li><p>Training of decision trees: Each decision tree is trained independently on its corresponding training set until each leaf node is pure or reaches the minimum number of node samples, usually without pruning.</p></li>
-<li><p>Aggregated prediction results: For classification problems, random forests work through a “voting” mechanism, that is, each decision tree gives a prediction result, and the final result is the category with the most votes among all tree predictions. For regression problems, random forests averages the predictions of all decision trees as the final prediction.</p></li>
+<li><p>Aggregated prediction results: For classification problems, Random Forests work through a “voting” mechanism, that is, each decision tree gives a prediction result, and the final result is the category with the most votes among all tree predictions. For regression problems, Random Forests averages the predictions of all decision trees as the final prediction.</p></li>
 </ol>
 </section>
 <section id="advantages-and-disadvantages" class="level5" data-number="6.1.2.2.2">
@@ -293,14 +299,14 @@ div.csl-indent {
 </ul>
 <p>Disadvantages:</p>
 <ul>
-<li><p>Poor model interpretability: Because random forest involves multiple decision trees, its prediction process is not as intuitive and easy to understand as a single decision tree.</p></li>
-<li><p>Training and prediction speed: Random forests require more computing resources and time than a single decision tree, especially when working with large-scale data sets.</p></li>
+<li><p>Poor model interpretability: Because Random Forest involves multiple decision trees, its prediction process is not as intuitive and easy to understand as a single decision tree.</p></li>
+<li><p>Training and prediction speed: Random Forests require more computing resources and time than a single decision tree, especially when working with large-scale data sets.</p></li>
 </ul>
 </section>
 </section>
 <section id="maximum-likelihood-classification-mlc" class="level4" data-number="6.1.2.3">
-<h4 data-number="6.1.2.3" class="anchored" data-anchor-id="maximum-likelihood-classification-mlc"><span class="header-section-number">6.1.2.3</span> Maximum likelihood classification (MLC)</h4>
-<p>Maximum likelihood classification (MLC) is based on statistical principles and makes classification decisions by estimating the probability of generating observed data for each category.</p>
+<h4 data-number="6.1.2.3" class="anchored" data-anchor-id="maximum-likelihood-classification-mlc"><span class="header-section-number">6.1.2.3</span> Maximum Likelihood Classification (MLC)</h4>
+<p>Maximum Likelihood Classification (MLC) is based on statistical principles and makes classification decisions by estimating the probability of generating observed data for each category.</p>
 <p>Working principle: For a given pixel, the maximum likelihood classification algorithm calculates the probability that it belongs to each possible class and classifies the pixel into the class with the highest probability.</p>
 <section id="advantages-and-disadvantages-1" class="level5" data-number="6.1.2.3.1">
 <h5 data-number="6.1.2.3.1" class="anchored" data-anchor-id="advantages-and-disadvantages-1"><span class="header-section-number">6.1.2.3.1</span> Advantages and disadvantages</h5>
@@ -318,8 +324,8 @@ div.csl-indent {
 </section>
 </section>
 <section id="support-vector-machine-svm" class="level4" data-number="6.1.2.4">
-<h4 data-number="6.1.2.4" class="anchored" data-anchor-id="support-vector-machine-svm"><span class="header-section-number">6.1.2.4</span> Support vector machine (SVM)</h4>
-<p>Support vector machines (SVM) is a powerful supervised learning algorithm used for classification and regression problems. SVM looks for the best decision boundary in a high-dimensional space. This decision boundary is called a maximum-margin hyperplane. It aims to maximize the margin between different categories, thus providing optimal category separation.</p>
+<h4 data-number="6.1.2.4" class="anchored" data-anchor-id="support-vector-machine-svm"><span class="header-section-number">6.1.2.4</span> Support Vector Machine (SVM)</h4>
+<p>Support Vector Machine (SVM) is a powerful supervised learning algorithm used for classification and regression problems. SVM looks for the best decision boundary in a high-dimensional space. This decision boundary is called a maximum-margin hyperplane. It aims to maximize the margin between different categories, thus providing optimal category separation.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figure/SVM.png" class="img-fluid figure-img" style="width:80.0%"></p>
@@ -363,9 +369,9 @@ div.csl-indent {
 <p>Unsupervised classification does not rely on training samples but identifies patterns and categories directly from the data.</p>
 <p>Common unsupervised classification algorithms include:</p>
 <ul>
-<li><p>K-means Clustering</p></li>
+<li><p>K-means clustering</p></li>
 <li><p>DBSCAN and HDBSCAN</p></li>
-<li><p>Iterative self-organizing data analysis (ISODATA): It is an improvement of K-means, allowing the number of categories to be merged and split during the iterative process, and more flexibly handles complex data.</p></li>
+<li><p>Iterative Self-Organizing Data Analysis (ISODATA): It is an improvement of K-means, allowing the number of categories to be merged and split during the iterative process, and more flexibly handles complex data.</p></li>
 </ul>
 </section>
 <section id="conclusion" class="level4" data-number="6.1.2.6">
@@ -395,14 +401,14 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figure/RF-result.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Random forests classification result</figcaption>
+<figcaption class="figure-caption">Random Forests classification result</figcaption>
 </figure>
 </div>
 <p>By comparing the results of CART and random forests, it can be found that random forests are more accurate for forest classification, and the results of other categories are roughly the same. Since the dataset is manually labeled and contains only a small number of samples, collecting more training data, selecting appropriate hyperparameters, and adding more predictor variables (such as spectral indices) can lead to better classification results.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figure/RF-Accuracy-Assessment.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Random forests classification accuracy assessment result</figcaption>
+<figcaption class="figure-caption">Random Forests classification accuracy assessment result</figcaption>
 </figure>
 </div>
 <p>It can be seen from the statistical information extracted from the confusion matrix that the classification results of random forests are relatively ideal, but there are still a small number of samples belonging to the herbaceous category that are identified as the developed category.</p>
@@ -822,8 +828,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Week_7.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 7 - Classification II</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -703,6 +703,85 @@
             "volume": "10"
         },
         {
+            "DOI": "10.3390/rs11182172",
+            "ISSN": "2072-4292",
+            "URL": "https://www.mdpi.com/2072-4292/11/18/2172",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        11
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Gilcher",
+                    "given": "Mario"
+                },
+                {
+                    "family": "Ruf",
+                    "given": "Thorsten"
+                },
+                {
+                    "family": "Emmerling",
+                    "given": "Christoph"
+                },
+                {
+                    "family": "Udelhoven",
+                    "given": "Thomas"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "Gilcher2019",
+            "issue": "18",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        1
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "2172",
+            "publisher": "Multidisciplinary Digital Publishing Institute",
+            "title": "Remote Sensing Based Binary Classification of Maize. Dealing with Residual Autocorrelation in Sparse Sample Situations",
+            "type": "article-journal",
+            "volume": "11"
+        },
+        {
+            "URL": "https://gisgeography.com/obia-object-based-image-analysis-geobia/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "GISGeography"
+                }
+            ],
+            "container-title": "GIS Geography",
+            "id": "GISGeography2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014,
+                        7
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "OBIA - Object-Based Image Analysis (GEOBIA)",
+            "type": ""
+        },
+        {
             "URL": "https://developers.google.com/earth-engine/guides/client_server",
             "accessed": {
                 "date-parts": [
@@ -780,6 +859,46 @@
             "title": "New York Air Quality: Challenges And Solutions",
             "title-short": "New York Air Quality",
             "type": ""
+        },
+        {
+            "DOI": "10.1109/ATSIP.2016.7523158",
+            "URL": "https://ieeexplore.ieee.org/document/7523158",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        11
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Haouas",
+                    "given": "Fatma"
+                },
+                {
+                    "family": "Ben Dhiaf",
+                    "given": "Zouhour"
+                },
+                {
+                    "family": "Solaiman",
+                    "given": "Basel"
+                }
+            ],
+            "container-title": "2016 2nd International Conference on Advanced Technologies for Signal and Image Processing (ATSIP)",
+            "id": "Haouas2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        3
+                    ]
+                ]
+            },
+            "page": "537-542",
+            "title": "Fusion of spatial autocorrelation and spectral data for remote sensing image classification",
+            "type": "paper-conference"
         },
         {
             "URL": "https://www.techwebspace.com/server-side-vs-client-side-programming-languages/",
@@ -953,6 +1072,55 @@
             "type": "book"
         },
         {
+            "DOI": "10.1007/s10994-021-05972-1",
+            "ISSN": "1573-0565",
+            "URL": "https://doi.org/10.1007/s10994-021-05972-1",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        11
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Karasiak",
+                    "given": "N."
+                },
+                {
+                    "family": "Dejoux",
+                    "given": "J.-F."
+                },
+                {
+                    "family": "Monteil",
+                    "given": "C."
+                },
+                {
+                    "family": "Sheeren",
+                    "given": "D."
+                }
+            ],
+            "container-title": "Machine Learning",
+            "id": "Karasiak2022",
+            "issue": "7",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        7
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "2715-2740",
+            "title": "Spatial dependence between training and test sets: Another pitfall of classification accuracy assessment in remote sensing",
+            "title-short": "Spatial dependence between training and test sets",
+            "type": "article-journal",
+            "volume": "111"
+        },
+        {
             "DOI": "10.1109/CoDIT.2019.8820307",
             "ISSN": "2576-3555",
             "URL": "https://ieeexplore.ieee.org/document/8820307",
@@ -992,6 +1160,67 @@
             "page": "801-806",
             "title": "Classification of Optical Remote Sensing Images Based on Convolutional Neural Network",
             "type": "paper-conference"
+        },
+        {
+            "DOI": "10.11834/jrs.20060234",
+            "ISSN": "1007-4619",
+            "URL": "http://www.ygxb.ac.cn/zh/article/doi/10.11834/jrs.20060234/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        11
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Liang-yun",
+                    "given": "Liu"
+                },
+                {
+                    "family": "Ji-hua",
+                    "given": "Wang"
+                },
+                {
+                    "family": "Chun-jiang",
+                    "given": "Zhao"
+                },
+                {
+                    "family": "Xiao-yu",
+                    "given": "Song"
+                },
+                {
+                    "family": "Cun-jun",
+                    "given": "Li"
+                },
+                {
+                    "family": "Chao",
+                    "given": "Zhang"
+                },
+                {
+                    "literal": "国家农业信息化工程技术研究中心   National Engineering Research Center for Information Technology in Agriculture"
+                },
+                {
+                    "literal": "国家农业信息化工程技术研究中心 北京100089"
+                }
+            ],
+            "container-title": "National Remote Sensing Bulletin",
+            "id": "Liang-yun2006a",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "227-235",
+            "title": "Study on Floating Prior Probability MLC Based on Spatial Features and Local Spatial Autocorrelation",
+            "type": "article-journal",
+            "volume": "0"
         },
         {
             "DOI": "10.1109/CISP.2009.5304005",
@@ -1784,6 +2013,62 @@
             "type": ""
         },
         {
+            "DOI": "10.5194/isprs-archives-XLI-B7-431-2016",
+            "ISSN": "1682-1750",
+            "URL": "https://isprs-archives.copernicus.org/articles/XLI-B7/431/2016/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        11
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Zhang",
+                    "given": "Y."
+                },
+                {
+                    "family": "Qin",
+                    "given": "K."
+                },
+                {
+                    "family": "Zeng",
+                    "given": "C."
+                },
+                {
+                    "family": "Zhang",
+                    "given": "E. B."
+                },
+                {
+                    "family": "Yue",
+                    "given": "M. X."
+                },
+                {
+                    "family": "Tong",
+                    "given": "X."
+                }
+            ],
+            "container-title": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
+            "id": "Zhang2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        6
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "431-435",
+            "publisher": "Copernicus GmbH",
+            "title": "A DATA FIELD METHOD FOR URBAN REMOTELY SENSED IMAGERY CLASSIFICATION CONSIDERING SPATIAL CORRELATION",
+            "type": "article-journal",
+            "volume": "XLI-B7"
+        },
+        {
             "DOI": "10.1109/EORSA.2018.8598605",
             "URL": "https://ieeexplore.ieee.org/document/8598605",
             "accessed": {
@@ -1818,6 +2103,37 @@
             "page": "1-5",
             "title": "A Method for water body extraction based on the tasselled cap transformation from remote sensing images",
             "type": "paper-conference"
+        },
+        {
+            "URL": "https://towardsdatascience.com/demystifying-confusion-matrix-29f3037b0cfa",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        10
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Zuhaib",
+                    "given": "Mohd"
+                }
+            ],
+            "container-title": "Medium",
+            "id": "Zuhaib2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        12
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "Demystifying the Confusion Matrix Using a Business Example",
+            "type": ""
         }
     ],
     "project_biblios": [

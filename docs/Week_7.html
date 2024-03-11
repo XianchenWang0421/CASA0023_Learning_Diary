@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>CASA0023 Learning Diary - 7&nbsp; Week 7 - Classification II</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./Week_6.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week_7.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 7 - Classification II</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">CASA0023 Learning Diary</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1 - An Introduction to Remote Sensing</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2 - Portfolio tools: Quarto</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Remote sensing data</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Policy applications</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5 - An introduction to Google Earth Engine</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6 - Classification</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_7.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 7 - Classification II</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">7.1</span> Summary</a>
+  <ul class="collapse">
+  <li><a href="#land-cover-classification" id="toc-land-cover-classification" class="nav-link" data-scroll-target="#land-cover-classification"><span class="header-section-number">7.1.1</span> Land cover classification</a></li>
+  <li><a href="#accuracy-assessment" id="toc-accuracy-assessment" class="nav-link" data-scroll-target="#accuracy-assessment"><span class="header-section-number">7.1.2</span> Accuracy assessment</a></li>
+  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical"><span class="header-section-number">7.1.3</span> Practical</a></li>
+  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">7.2</span> Applications</a></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">7.3</span> Reflections</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 7 - Classification II</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="summary" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
+<p>This week’s content is still the classification of remote sensing data, introducing two new methods and evaluation indicators. In addition, issues regarding spatial autocorrelation when partitioning data are also discussed.</p>
+<section id="land-cover-classification" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="land-cover-classification"><span class="header-section-number">7.1.1</span> Land cover classification</h3>
+<section id="object-based-image-analysis-obia" class="level4" data-number="7.1.1.1">
+<h4 data-number="7.1.1.1" class="anchored" data-anchor-id="object-based-image-analysis-obia"><span class="header-section-number">7.1.1.1</span> Object based image analysis (OBIA)</h4>
+<p>Object based image analysis (OBIA) is a remote sensing image processing and analysis method, which is different from the traditional pixel-based analysis method. The OBIA method focuses on objects in the image (i.e., a group of adjacent pixels with similar characteristics) rather than individual pixels, and performs image classification and interpretation by analyzing the attributes of these objects (such as shape, texture, contextual relationships, etc.). This method is particularly suitable for high-resolution remote sensing data and can better handle spatial information and complex surface features in images.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/OBIA.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Object based image analysis <span class="citation" data-cites="GISGeography2014">(<a href="references.html#ref-GISGeography2014" role="doc-biblioref">GISGeography, 2014</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="working-principle" class="level4" data-number="7.1.1.2">
+<h4 data-number="7.1.1.2" class="anchored" data-anchor-id="working-principle"><span class="header-section-number">7.1.1.2</span> Working principle</h4>
+<ol type="1">
+<li><p>Image segmentation: Split an image into many independent objects. The goal of image segmentation is to ensure that pixels within the same object are more similar than pixels between different objects. Common methods include Simple Linear Iterative Clustering (SLIC), etc.</p></li>
+<li><p>Object feature extraction: Extract various features for each object, including spectral features, spatial features, texture features, and contextual features.</p></li>
+<li><p>Classification and analysis: Using the extracted features, objects are classified through classification algorithms.</p></li>
+<li><p>Post-processing: may include optimization of classification results, correction of errors, merging of specific objects, etc., to improve the accuracy and usability of the final results.</p></li>
+</ol>
+<section id="advantages-and-disadvantages" class="level5" data-number="7.1.1.2.1">
+<h5 data-number="7.1.1.2.1" class="anchored" data-anchor-id="advantages-and-disadvantages"><span class="header-section-number">7.1.1.2.1</span> Advantages and disadvantages</h5>
+<p>Advantages:</p>
+<ul>
+<li><p>Utilization of spatial information: OBIA can effectively utilize the spatial information and contextual information of objects to improve classification accuracy and interpretation capabilities.</p></li>
+<li><p>Reduced noise phenomena: Compared with pixel-based methods, OBIA reduces noise phenomena in classification results because it focuses on the entire object rather than individual pixels.</p></li>
+<li><p>Strong adaptability: OBIA can adjust image segmentation and feature extraction strategies according to different application requirements, and has good adaptability.</p></li>
+<li><p>Processing high-resolution data: OBIA is particularly suitable for processing these high-resolution data and can better identify and analyze small surface features.</p></li>
+</ul>
+<p>Disadvantages:</p>
+<ul>
+<li><p>Computational complexity: The computational complexity of OBIA is usually higher than that of pixel-based methods, especially in the image segmentation and complex feature extraction stages.</p></li>
+<li><p>Parameter selection: Parameter selection during image segmentation and classification has a great impact on the final results, but often requires manual adjustment according to specific applications, which may require more professional knowledge and experience.</p></li>
+<li><p>Software and resource requirements: Performing OBIA analysis often requires specialized software and high computing resources.</p></li>
+</ul>
+</section>
+</section>
+<section id="sub-pixel-analysis" class="level4" data-number="7.1.1.3">
+<h4 data-number="7.1.1.3" class="anchored" data-anchor-id="sub-pixel-analysis"><span class="header-section-number">7.1.1.3</span> Sub-pixel analysis</h4>
+<p>Sub-pixel analysis is an image processing technique that extracts information at a scale finer than the pixel resolution of the image. This technique is particularly useful in the field of remote sensing, where each pixel of an image may cover a fairly large area on the ground, and these areas may contain many different surface types. Sub-pixel analysis allows for a more accurate estimate of the proportion of coverage of these surface types, even if they are mixed within a single pixel.</p>
+<p>Sub-pixel analysis has a wide range of applications in the field of remote sensing, including:</p>
+<ul>
+<li><p>Land Cover Classification: Improve the accuracy of land cover classification, especially in border areas or areas with many mixed pixels.</p></li>
+<li><p>Resource Assessment: More accurately assess natural resources, such as vegetation cover, water resources, etc.</p></li>
+<li><p>Environmental monitoring: Monitoring environmental changes, such as wetland degradation, deforestation, etc., even if these changes occur on a small scale.</p></li>
+<li><p>Urban planning: In cities and suburbs, sub-pixel analysis can help identify and monitor the development of buildings, roads, and other man-made structures.</p></li>
+</ul>
+</section>
+<section id="working-principle-1" class="level4" data-number="7.1.1.4">
+<h4 data-number="7.1.1.4" class="anchored" data-anchor-id="working-principle-1"><span class="header-section-number">7.1.1.4</span> Working principle</h4>
+<p>The basic idea of sub-pixel analysis is that even within a single pixel, the mixture of different surface types affects the spectral response of that pixel. By analyzing these spectral responses, the relative proportions of each land surface type within a pixel can be inferred. This approach typically relies on spectral unmixing algorithms that attempt to decompose a pixel’s spectral signal into its component parts and estimate the proportion of coverage of each type.</p>
+<section id="advantages-and-disadvantages-1" class="level5" data-number="7.1.1.4.1">
+<h5 data-number="7.1.1.4.1" class="anchored" data-anchor-id="advantages-and-disadvantages-1"><span class="header-section-number">7.1.1.4.1</span> Advantages and disadvantages</h5>
+<p>Advantages:</p>
+<ul>
+<li><p>Improved resolution: Sub-pixel analysis can provide finer-grained information than pixel level when the spatial resolution of the image is fixed, thereby enhancing the understanding of surface features.</p></li>
+<li><p>Solution to the mixed pixel problem: In remote sensing images, one pixel often contains multiple types of ground objects. Subpixel analysis can identify and quantify the proportions of individual components in these mixed pixels.</p></li>
+<li><p>Cost-Effectiveness: Compared to acquiring higher-resolution remote sensing images, sub-pixel analysis is a more cost-effective method of leveraging existing low-resolution images.</p></li>
+</ul>
+<p>Disadvantages:</p>
+<ul>
+<li><p>Algorithm complexity: Sub-pixel analysis often requires complex algorithms, such as spectral unmixing, and the implementation and parameter adjustment of these algorithms can be complex.</p></li>
+<li><p>Endmember selection: The accuracy of sub-pixel analysis is highly dependent on the selection of endmembers (i.e.&nbsp;pure ground object spectra). Improper selection of endmembers may lead to inaccurate analysis results.</p></li>
+<li><p>Computational cost: Although subpixel analysis can avoid the cost of acquiring high-resolution images, its computational process can require high computational resources and time.</p></li>
+<li><p>Model limitations: Most subpixel analysis methods assume that the mixing within pixels is linear, but in real situations, the mixing process may be nonlinear, which may limit the accuracy of the analysis.</p></li>
+<li><p>Data quality dependence: The effect of sub-pixel analysis is affected by the quality of input data, such as spectral resolution, noise level, etc. Low-quality data may lead to unreliable analysis results.</p></li>
+<li><p>Validation Difficulty: Because subpixel analysis provides information at a finer level than actual pixel resolution, validating these results on the ground can be very difficult.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="accuracy-assessment" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="accuracy-assessment"><span class="header-section-number">7.1.2</span> Accuracy assessment</h3>
+<p>In classification problems, accuracy assessment is an important step in measuring the performance of the classification model. It involves comparing the model’s predictions to actual conditions and using various metrics to quantify the model’s accuracy and reliability.</p>
+<section id="confusion-matrix" class="level4" data-number="7.1.2.1">
+<h4 data-number="7.1.2.1" class="anchored" data-anchor-id="confusion-matrix"><span class="header-section-number">7.1.2.1</span> Confusion matrix</h4>
+<p>The confusion matrix is a very useful tool that shows the relationship between the predictions of a classification model and the actual labels.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/Confusion_Matrix.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Confusion matrix <span class="citation" data-cites="Zuhaib2019">(<a href="references.html#ref-Zuhaib2019" role="doc-biblioref">Zuhaib, 2019</a>)</span></figcaption>
+</figure>
+</div>
+<p>For a binary classification problem, the confusion matrix consists of four parts:</p>
+<ul>
+<li>True Positive (TP): The number of positive examples correctly predicted by the model.</li>
+<li>False Positive (FP): The number of positive examples incorrectly predicted by the model.</li>
+<li>True Negative (TN): The number of negative examples correctly predicted by the model.</li>
+<li>False Negative (FN): The number of negative examples incorrectly predicted by the model.</li>
+</ul>
+<p>For multi-classification problems, the confusion matrix will be expanded to have corresponding TP, FP, TN, and FN for each category.</p>
+</section>
+<section id="metrics" class="level4" data-number="7.1.2.2">
+<h4 data-number="7.1.2.2" class="anchored" data-anchor-id="metrics"><span class="header-section-number">7.1.2.2</span> Metrics</h4>
+<section id="accuracy-overall-accuracy" class="level5" data-number="7.1.2.2.1">
+<h5 data-number="7.1.2.2.1" class="anchored" data-anchor-id="accuracy-overall-accuracy"><span class="header-section-number">7.1.2.2.1</span> Accuracy (overall accuracy)</h5>
+<p>Accuracy is the most intuitive evaluation indicator, which represents the proportion of samples correctly predicted by the model to the total samples.</p>
+<p><span class="math inline">\(\frac {TP+TN} {TP+FP+TN+FN}\)</span></p>
+</section>
+<section id="precision-users-accuracy" class="level5" data-number="7.1.2.2.2">
+<h5 data-number="7.1.2.2.2" class="anchored" data-anchor-id="precision-users-accuracy"><span class="header-section-number">7.1.2.2.2</span> Precision (user’s accuracy)</h5>
+<p>Precision is the proportion of samples predicted as positive by the model that are actually positive.</p>
+<p><span class="math inline">\(\frac {TP} {TP+FP}\)</span></p>
+</section>
+<section id="recal-producers-accuracy" class="level5" data-number="7.1.2.2.3">
+<h5 data-number="7.1.2.2.3" class="anchored" data-anchor-id="recal-producers-accuracy"><span class="header-section-number">7.1.2.2.3</span> Recal (producer’s accuracy)</h5>
+<p>Recall is the proportion of samples correctly predicted as positive examples by the model to all actual positive examples.</p>
+<p><span class="math inline">\(\frac {TP} {TP+FN}\)</span></p>
+</section>
+<section id="f1-score" class="level5" data-number="7.1.2.2.4">
+<h5 data-number="7.1.2.2.4" class="anchored" data-anchor-id="f1-score"><span class="header-section-number">7.1.2.2.4</span> F1 score</h5>
+<p>The F1 score is the harmonic mean of precision and recall, which attempts to consider both precision and recall.</p>
+<p><span class="math inline">\(F1 = 2 \times \frac {Precision \times Recall} {Precision + Recall}\)</span></p>
+</section>
+<section id="receiver-operating-characteristic-curve-roc-curve-and-area-under-the-curve-auc" class="level5" data-number="7.1.2.2.5">
+<h5 data-number="7.1.2.2.5" class="anchored" data-anchor-id="receiver-operating-characteristic-curve-roc-curve-and-area-under-the-curve-auc"><span class="header-section-number">7.1.2.2.5</span> Receiver Operating Characteristic Curve (ROC Curve) and Area Under the Curve (AUC)</h5>
+<p>ROC Curve is a graphical tool used to display the performance of a classification model under all possible classification thresholds. AUC provides an indicator to quantify model performance. The higher the AUC value, the better the performance of the model.</p>
+</section>
+<section id="kappa-coefficient" class="level5" data-number="7.1.2.2.6">
+<h5 data-number="7.1.2.2.6" class="anchored" data-anchor-id="kappa-coefficient"><span class="header-section-number">7.1.2.2.6</span> Kappa coefficient</h5>
+<p>Kappa coefficient is an accuracy metric that takes into account random consistency and compares the accuracy of actual observations to the accuracy expected from a random classifier.</p>
+<p>The value of Kappa coefficient ranges from -1 to 1. A value of 1 indicates perfect agreement, a value of 0 indicates that the agreement is consistent with random prediction, and a negative value indicates that the agreement is less than random prediction.</p>
+<ul>
+<li><p>Kappa coefficient is more reliable than simple accuracy and provides a more robust performance evaluation by taking into account the random consistency that may exist in the data.</p></li>
+<li><p>In an imbalanced dataset, where some classes have far more samples than others, simple accuracy can be misleading. In this case, the Kappa coefficient can provide a more unbiased performance assessment because it takes into account the accuracy of random predictions.</p></li>
+<li><p>In remote sensing image classification, Kappa coefficient is often used to evaluate the accuracy of classification results. By comparing the classification results with the ground truth.</p></li>
+<li><p>The Kappa coefficient may be too sensitive to imbalanced data sets and may be difficult to interpret in some cases.</p></li>
+<li><p>When using the Kappa coefficient, it should be combined with other performance indicators (such as accuracy, recall, F1 score, etc.) to comprehensively evaluate the performance of the classification model.</p></li>
+</ul>
+</section>
+</section>
+<section id="dataset-split-method" class="level4" data-number="7.1.2.3">
+<h4 data-number="7.1.2.3" class="anchored" data-anchor-id="dataset-split-method"><span class="header-section-number">7.1.2.3</span> Dataset split method</h4>
+<section id="cross-validation" class="level5" data-number="7.1.2.3.1">
+<h5 data-number="7.1.2.3.1" class="anchored" data-anchor-id="cross-validation"><span class="header-section-number">7.1.2.3.1</span> Cross-validation</h5>
+<p>Cross-validation is a statistical method used to evaluate the performance of machine learning models on independent data sets. This method is mainly used for model selection and parameter adjustment to ensure that the model has good generalization ability, that is, it can also show good performance on unseen data. Cross-validation reduces chance in the model evaluation process by dividing the data set into parts and repeatedly using different parts to train and validate the model.</p>
+<p>Common cross-validation methods: k-fold cross-validation, Leave-One-Out cross-validation (LOOCV), Stratified k-fold cross-validation and Time Series cross-validation.</p>
+</section>
+<section id="spatial-cross-validation" class="level5" data-number="7.1.2.3.2">
+<h5 data-number="7.1.2.3.2" class="anchored" data-anchor-id="spatial-cross-validation"><span class="header-section-number">7.1.2.3.2</span> Spatial Cross-Validation</h5>
+<p>Spatial Cross-Validation is a special type of cross-validation method used to evaluate model performance on data sets with spatial dependencies. In traditional cross-validation, the data are usually assumed to be independent and identically distributed, but in spatial data, this assumption is often not true because spatially close observation points may be correlated. Spatial cross-validation aims to solve this problem by spatially splitting the data to ensure independence between the training and validation sets.</p>
+<p>Spatial cross-validation is particularly suitable for the following application scenarios:</p>
+<ul>
+<li><p>Spatial statistics and geographical modeling: When conducting spatial data analysis, such as environmental monitoring, resource assessment, epidemiological research, etc.</p></li>
+<li><p>Remote sensing image analysis: When processing remote sensing data, such as land cover classification, forest change detection, etc.</p></li>
+<li><p>Geographic Information System (GIS) applications: Spatial data mining and predictive modeling in GIS.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="practical" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="practical"><span class="header-section-number">7.1.3</span> Practical</h3>
+<p>This week’s practical focuses on object based image analysis and sub-pixel analysis.</p>
+<p>The remote sensing data uses Landsat 8 data set, from 01/01/2022 to 10/10/2022, located in Dar es Salaam (the largest city and financial hub of Tanzania).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/object-based-analysis-result.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Object based image analysis result</figcaption>
+</figure>
+</div>
+<p>The results of OBIA show that it is generally effective in identifying cities and forests.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figure/sub-pixel-analysis-result.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Sub-pixel analysis result</figcaption>
+</figure>
+</div>
+<p>From the sub-pixel results, it is also not good at recognizing cities and forests.</p>
+</section>
+</section>
+<section id="applications" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">7.2</span> Applications</h2>
+<p>Regarding this week’s applications, I am very interested in considering the spatial autocorrelation problem in remote sensing data classification tasks, So I will discuss several research efforts in this area below.</p>
+<p>One study <span class="citation" data-cites="Karasiak2022">(<a href="references.html#ref-Karasiak2022" role="doc-biblioref">Karasiak <em>et al.</em>, 2022</a>)</span> pointed out that ignoring the spatial dependence between the training set and the test set may lead to an overestimation of the model’s generalization ability. The research team experimentally demonstrated that spatial leave-one-out cross-validation is a better strategy for providing unbiased estimates of prediction errors.</p>
+<p>Another study <span class="citation" data-cites="Gilcher2019">(<a href="references.html#ref-Gilcher2019" role="doc-biblioref">Gilcher <em>et al.</em>, 2019</a>)</span> used a classification algorithm to estimate the amount of corn in each image pixel, taking into account the spatial relationships between pixels. This study combines two methods of combining adjacent pixel spatial autocorrelation with three different classification models and discusses the performance of each modeling method. Experiments have shown that the overall performance of random forest combined with Gaussian blur is better, but there are also certain differences from the real results.</p>
+<p>There is also a study <span class="citation" data-cites="Zhang2016">(<a href="references.html#ref-Zhang2016" role="doc-biblioref">Zhang <em>et al.</em>, 2016</a>)</span> using Geary’s C to measure the degree of local spatial autocorrelation and using support vector machine for remote sensing image classification. This study combines spectral features and spatial correlation features to improve the accuracy of identifying different objects.</p>
+<p>A study <span class="citation" data-cites="Haouas2016">(<a href="references.html#ref-Haouas2016" role="doc-biblioref">Haouas, Ben Dhiaf and Solaiman, 2016</a>)</span> with the same findings also showed that combining spectral data with spatial autocorrelation can improve the classification of remote sensing images. The study found a positive impact on identifying and classifying different regions in images by using the local Moran’s I.</p>
+<p>Furthermore, a study <span class="citation" data-cites="Liang-yun2006a">(<a href="references.html#ref-Liang-yun2006a" role="doc-biblioref">Liang-yun <em>et al.</em>, 2006</a>)</span> proposes a new method to utilize local spatial information to adjust prior probabilities in maximum likelihood classification (MLC). Aims to utilize spatial features and prior knowledge to improve the accuracy of MLC methods.</p>
+<p>The above studies all show the importance of considering spatial factors for classification problems. Whether in the data partitioning or model design process, introducing spatial features into either aspect can lead to more realistic classification results.</p>
+</section>
+<section id="reflections" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">7.3</span> Reflections</h2>
+<p>This week also covered a lot of content, which enriched my knowledge in the field of remote sensing data classification. On the basis of learning various classification methods, I also learned about the indicators for evaluating these methods. More importantly, by learning how to divide the dataset, I started to think about the necessity of considering spatial autocorrelation or spatial constraints in the context of remote sensing data. And by reviewing relevant literature, I gradually came to believe that this is necessary. The unique feature of remote sensing data is that it has obvious spectral, spatial and temporal characteristics, which is very different from the data I have encountered in the past. Therefore, this also prompted me to think about how to deal with research problems not only from a methodological perspective, but also to consider the background environment where the problem is located. I find it very interesting and valuable to explore how to combine powerful machine learning or deep learning methods with remote sensing data. And those data is a true representation of real life and gives us the opportunity to solve the world’s problems. These problems are bound to be very difficult, but I believe the more aspects we think about, the higher the probability of solving it.</p>
+
+
+<div id="refs" class="references csl-bib-body" role="list" style="display: none">
+<div id="ref-Gilcher2019" class="csl-entry" role="listitem">
+Gilcher, M. <em>et al.</em> (2019) <span>“Remote <span>Sensing Based Binary Classification</span> of <span>Maize</span>. <span>Dealing</span> with <span>Residual Autocorrelation</span> in <span>Sparse Sample Situations</span>,”</span> <em>Remote Sensing</em>, 11(18), p. 2172. doi: <a href="https://doi.org/10.3390/rs11182172">10.3390/rs11182172</a>.
+</div>
+<div id="ref-GISGeography2014" class="csl-entry" role="listitem">
+GISGeography (2014) <span>“<span>OBIA</span> - <span>Object-Based Image Analysis</span> (<span>GEOBIA</span>),”</span> <em>GIS Geography</em>. Available at: <a href="https://gisgeography.com/obia-object-based-image-analysis-geobia/">https://gisgeography.com/obia-object-based-image-analysis-geobia/</a> (Accessed: March 10, 2024).
+</div>
+<div id="ref-Haouas2016" class="csl-entry" role="listitem">
+Haouas, F., Ben Dhiaf, Z. and Solaiman, B. (2016) <span>“Fusion of spatial autocorrelation and spectral data for remote sensing image classification,”</span> in <em>2016 2nd <span>International Conference</span> on <span>Advanced Technologies</span> for <span>Signal</span> and <span>Image Processing</span> (<span>ATSIP</span>)</em>, pp. 537–542. doi: <a href="https://doi.org/10.1109/ATSIP.2016.7523158">10.1109/ATSIP.2016.7523158</a>.
+</div>
+<div id="ref-Karasiak2022" class="csl-entry" role="listitem">
+Karasiak, N. <em>et al.</em> (2022) <span>“Spatial dependence between training and test sets: Another pitfall of classification accuracy assessment in remote sensing,”</span> <em>Machine Learning</em>, 111(7), pp. 2715–2740. doi: <a href="https://doi.org/10.1007/s10994-021-05972-1">10.1007/s10994-021-05972-1</a>.
+</div>
+<div id="ref-Liang-yun2006a" class="csl-entry" role="listitem">
+Liang-yun, L. <em>et al.</em> (2006) <span>“Study on <span>Floating Prior Probability MLC Based</span> on <span>Spatial Features</span> and <span>Local Spatial Autocorrelation</span>,”</span> <em>National Remote Sensing Bulletin</em>, 0(2), pp. 227–235. doi: <a href="https://doi.org/10.11834/jrs.20060234">10.11834/jrs.20060234</a>.
+</div>
+<div id="ref-Zhang2016" class="csl-entry" role="listitem">
+Zhang, Y. <em>et al.</em> (2016) <span>“A <span>DATA FIELD METHOD FOR URBAN REMOTELY SENSED IMAGERY CLASSIFICATION CONSIDERING SPATIAL CORRELATION</span>,”</span> <em>The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences</em>, XLI-B7, pp. 431–435. doi: <a href="https://doi.org/10.5194/isprs-archives-XLI-B7-431-2016">10.5194/isprs-archives-XLI-B7-431-2016</a>.
+</div>
+<div id="ref-Zuhaib2019" class="csl-entry" role="listitem">
+Zuhaib, M. (2019) <span>“Demystifying the <span>Confusion Matrix Using</span> a <span>Business Example</span>,”</span> <em>Medium</em>. Available at: <a href="https://towardsdatascience.com/demystifying-confusion-matrix-29f3037b0cfa">https://towardsdatascience.com/demystifying-confusion-matrix-29f3037b0cfa</a> (Accessed: March 10, 2024).
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Week_6.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6 - Classification</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

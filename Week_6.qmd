@@ -24,11 +24,11 @@ Remote sensing data classification is the process of assigning pixels in remote 
 
 First let's look at supervised learning. Supervised classification refers to using samples (training sets) of known categories to guide the classification process.
 
-#### Classification and regression trees (CART)
+#### Classification and Regression Trees (CART)
 
 CART can be used to solve classification problems (i.e., predict the value of a discrete variable) and regression problems (i.e., predict the value of a continuous variable). It works by recursively splitting a data set into smaller subsets while building nodes of a decision tree for each subset.
 
-![Classification and regression trees [@Ye2020]](figure/CART.png){width="80%"}
+![Classification and Regression Trees [@Ye2020]](figure/CART.png){width="80%"}
 
 ##### Working principle
 
@@ -44,11 +44,11 @@ CART can be used to solve classification problems (i.e., predict the value of a 
 
 -   Regression tree: When the target variable is continuous, CART generates a regression tree. At each leaf node, it will give a numerical value as the prediction result. The criterion commonly used by regression trees when selecting split points is minimizing the mean square error (MSE).
 
-#### Random forests
+#### Random Forests
 
 Random Forests are used to solve classification and regression problems. It is a type of ensemble learning method that makes the final decision by building multiple decision trees and summarizing their prediction results. The core idea of the random forest algorithm is "collective intelligence". A single decision tree may not be accurate or stable enough to predict the data, but combining the prediction results of multiple decision trees can significantly improve the accuracy and robustness of the prediction.
 
-![Random forests [@Aggiwal2017]](figure/Random_Forests.jpg){width="80%"}
+![Random Forests [@Aggiwal2017]](figure/Random_Forests.jpg){width="80%"}
 
 ##### Working principle
 
@@ -58,7 +58,7 @@ Random Forests are used to solve classification and regression problems. It is a
 
 3.  Training of decision trees: Each decision tree is trained independently on its corresponding training set until each leaf node is pure or reaches the minimum number of node samples, usually without pruning.
 
-4.  Aggregated prediction results: For classification problems, random forests work through a "voting" mechanism, that is, each decision tree gives a prediction result, and the final result is the category with the most votes among all tree predictions. For regression problems, random forests averages the predictions of all decision trees as the final prediction.
+4.  Aggregated prediction results: For classification problems, Random Forests work through a "voting" mechanism, that is, each decision tree gives a prediction result, and the final result is the category with the most votes among all tree predictions. For regression problems, Random Forests averages the predictions of all decision trees as the final prediction.
 
 ##### Advantages and disadvantages
 
@@ -74,13 +74,13 @@ Advantage:
 
 Disadvantages:
 
--   Poor model interpretability: Because random forest involves multiple decision trees, its prediction process is not as intuitive and easy to understand as a single decision tree.
+-   Poor model interpretability: Because Random Forest involves multiple decision trees, its prediction process is not as intuitive and easy to understand as a single decision tree.
 
--   Training and prediction speed: Random forests require more computing resources and time than a single decision tree, especially when working with large-scale data sets.
+-   Training and prediction speed: Random Forests require more computing resources and time than a single decision tree, especially when working with large-scale data sets.
 
-#### Maximum likelihood classification (MLC)
+#### Maximum Likelihood Classification (MLC)
 
-Maximum likelihood classification (MLC) is based on statistical principles and makes classification decisions by estimating the probability of generating observed data for each category.
+Maximum Likelihood Classification (MLC) is based on statistical principles and makes classification decisions by estimating the probability of generating observed data for each category.
 
 Working principle: For a given pixel, the maximum likelihood classification algorithm calculates the probability that it belongs to each possible class and classifies the pixel into the class with the highest probability.
 
@@ -100,9 +100,9 @@ Disadvantages:
 
 -   Dependence on training samples: The performance of MLC relies heavily on high quality training samples. If the training samples are insufficient or unrepresentative, the classification results may be inaccurate.
 
-#### Support vector machine (SVM)
+#### Support Vector Machine (SVM)
 
-Support vector machines (SVM) is a powerful supervised learning algorithm used for classification and regression problems. SVM looks for the best decision boundary in a high-dimensional space. This decision boundary is called a maximum-margin hyperplane. It aims to maximize the margin between different categories, thus providing optimal category separation.
+Support Vector Machine (SVM) is a powerful supervised learning algorithm used for classification and regression problems. SVM looks for the best decision boundary in a high-dimensional space. This decision boundary is called a maximum-margin hyperplane. It aims to maximize the margin between different categories, thus providing optimal category separation.
 
 ![Support vector machine [@SatyaMallick2018]](figure/SVM.png){width="80%"}
 
@@ -150,11 +150,11 @@ Unsupervised classification does not rely on training samples but identifies pat
 
 Common unsupervised classification algorithms include:
 
--   K-means Clustering
+-   K-means clustering
 
 -   DBSCAN and HDBSCAN
 
--   Iterative self-organizing data analysis (ISODATA): It is an improvement of K-means, allowing the number of categories to be merged and split during the iterative process, and more flexibly handles complex data.
+-   Iterative Self-Organizing Data Analysis (ISODATA): It is an improvement of K-means, allowing the number of categories to be merged and split during the iterative process, and more flexibly handles complex data.
 
 #### Conclusion
 
@@ -177,11 +177,11 @@ Each land cover category in the image is labeled as follows:
 
 ![CART classification result](figure/CART-result.jpg)
 
-![Random forests classification result](figure/RF-result.jpg)
+![Random Forests classification result](figure/RF-result.jpg)
 
 By comparing the results of CART and random forests, it can be found that random forests are more accurate for forest classification, and the results of other categories are roughly the same. Since the dataset is manually labeled and contains only a small number of samples, collecting more training data, selecting appropriate hyperparameters, and adding more predictor variables (such as spectral indices) can lead to better classification results.
 
-![Random forests classification accuracy assessment result](figure/RF-Accuracy-Assessment.jpg)
+![Random Forests classification accuracy assessment result](figure/RF-Accuracy-Assessment.jpg)
 
 It can be seen from the statistical information extracted from the confusion matrix that the classification results of random forests are relatively ideal, but there are still a small number of samples belonging to the herbaceous category that are identified as the developed category.
 
