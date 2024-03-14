@@ -2,4 +2,12 @@
 
 This is the learning diary of the CASA0023 (Remotely Sensing Cities and Environments).
 
-Due to the instability of rstudio render, please read the chapters in order.
+Personal introduction:
+
+Hello, I am Xianchen Wang. Currently a student at the Center for Advanced Spatial Analysis, UCL, I am doing a master's program.
+
+In the past, I obtained a bachelor's degree in computer science and conducted some research work in the direction of deep learning. I have a high research interest in data science, especially urban spatial data. The main purpose of choosing the remote sensing course is to supplement some prior knowledge that I don't know. I think this will be helpful for my future research.
+
+This website is my diary of studying the module "Remotely Sensing cities and Environments", recording my thoughts during the learning process.
+
+(Due to the instability of rstudio render, please read the chapters in order, thanks.)

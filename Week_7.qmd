@@ -195,7 +195,7 @@ There is also a study [@Zhang2016] using Geary's C to measure the degree of loca
 
 A study [@Haouas2016] with the same findings also showed that combining spectral data with spatial autocorrelation can improve the classification of remote sensing images. The study found a positive impact on identifying and classifying different regions in images by using the local Moran's I.
 
-Furthermore, a study [@Liang-yun2006a] proposes a new method to utilize local spatial information to adjust prior probabilities in maximum likelihood classification (MLC). Aims to utilize spatial features and prior knowledge to improve the accuracy of MLC methods.
+Furthermore, a study [@Liu2006] proposes a new method to utilize local spatial information to adjust prior probabilities in maximum likelihood classification (MLC). Aims to utilize spatial features and prior knowledge to improve the accuracy of MLC methods.
 
 The above studies all show the importance of considering spatial factors for classification problems. Whether in the data partitioning or model design process, introducing spatial features into either aspect can lead to more realistic classification results.
 

@@ -80,6 +80,37 @@
             "type": "paper-conference"
         },
         {
+            "URL": "https://www.aidash.com/synthetic-aperture-radar-the-hero-tool-for-remote-sensing/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        13
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "AiDash"
+                }
+            ],
+            "container-title": "AiDash",
+            "id": "AiDash2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        12
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "Synthetic Aperture Radar: The hero tool for remote sensing",
+            "title-short": "Synthetic Aperture Radar",
+            "type": ""
+        },
+        {
             "DOI": "10.1142/S0218001418590127",
             "ISSN": "0218-0014",
             "URL": "https://www.worldscientific.com/doi/abs/10.1142/S0218001418590127",
@@ -130,6 +161,72 @@
             "title": "A New Technique for Remote Sensing Image Classification Based on Combinatorial Algorithm of SVM and KNN",
             "type": "article-journal",
             "volume": "32"
+        },
+        {
+            "DOI": "10.3390/rs13040604",
+            "ISSN": "2072-4292",
+            "URL": "https://www.mdpi.com/2072-4292/13/4/604",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        13
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Amitrano",
+                    "given": "Donato"
+                },
+                {
+                    "family": "Di Martino",
+                    "given": "Gerardo"
+                },
+                {
+                    "family": "Guida",
+                    "given": "Raffaella"
+                },
+                {
+                    "family": "Iervolino",
+                    "given": "Pasquale"
+                },
+                {
+                    "family": "Iodice",
+                    "given": "Antonio"
+                },
+                {
+                    "family": "Papa",
+                    "given": "Maria Nicolina"
+                },
+                {
+                    "family": "Riccio",
+                    "given": "Daniele"
+                },
+                {
+                    "family": "Ruello",
+                    "given": "Giuseppe"
+                }
+            ],
+            "container-title": "Remote Sensing",
+            "id": "Amitrano2021",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        1
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "604",
+            "publisher": "Multidisciplinary Digital Publishing Institute",
+            "title": "Earth Environmental Monitoring Using Multi-Temporal Synthetic Aperture Radar: A Critical Review of Selected Applications",
+            "title-short": "Earth Environmental Monitoring Using Multi-Temporal Synthetic Aperture Radar",
+            "type": "article-journal",
+            "volume": "13"
         },
         {
             "DOI": "10.3390/ECWS-7-14171",
@@ -227,6 +324,63 @@
             "title-short": "Localizing SDG 11.6.2 via Earth Observation, Modelling Applications, and Harmonised City Definitions",
             "type": "article-journal",
             "volume": "15"
+        },
+        {
+            "DOI": "10.1109/DICTA56598.2022.10034640",
+            "URL": "https://ieeexplore.ieee.org/document/10034640",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        13
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Cao",
+                    "given": "Tri-Tan"
+                },
+                {
+                    "family": "Luckett",
+                    "given": "Connor"
+                },
+                {
+                    "family": "Williams",
+                    "given": "Jerome"
+                },
+                {
+                    "family": "Cooke",
+                    "given": "Tristrom"
+                },
+                {
+                    "family": "Yip",
+                    "given": "Ben"
+                },
+                {
+                    "family": "Rajagopalan",
+                    "given": "Arvind"
+                },
+                {
+                    "family": "Wong",
+                    "given": "Sebastien"
+                }
+            ],
+            "container-title": "2022 International Conference on Digital Image Computing: Techniques and Applications (DICTA)",
+            "id": "Cao2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        11
+                    ]
+                ]
+            },
+            "page": "1-8",
+            "title": "SARFish: Space-Based Maritime Surveillance Using Complex Synthetic Aperture Radar Imagery",
+            "title-short": "SARFish",
+            "type": "paper-conference"
         },
         {
             "DOI": "10.1016/j.ecss.2018.10.021",
@@ -1001,6 +1155,35 @@
             "volume": "8"
         },
         {
+            "URL": "https://icrowdnewswire.com/2022/06/23/synthetic-aperture-radar-market-is-going-to-boom-thales-lockheed-martin-raytheon/amp/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        13
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "iCrowdNewswire"
+                }
+            ],
+            "id": "ICrowdNewswire2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        6
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "Synthetic Aperture Radar Market Is Going To Boom  Thales, Lockheed Martin, Raytheon",
+            "type": ""
+        },
+        {
             "DOI": "10.30564/jasr.v6i3.5834",
             "ISSN": "2630-5119",
             "URL": "https://journals.bilpubgroup.com/index.php/jasr/article/view/5834",
@@ -1174,26 +1357,27 @@
                     ]
                 ]
             },
+            "annote": "titleTranslation:",
             "author": [
                 {
-                    "family": "Liang-yun",
-                    "given": "Liu"
+                    "family": "Liu",
+                    "given": "Liangyun"
                 },
                 {
-                    "family": "Ji-hua",
-                    "given": "Wang"
+                    "family": "Wang",
+                    "given": "Jihua"
                 },
                 {
-                    "family": "Chun-jiang",
-                    "given": "Zhao"
+                    "family": "Zhao",
+                    "given": "Chunjiang"
                 },
                 {
-                    "family": "Xiao-yu",
-                    "given": "Song"
+                    "family": "Song",
+                    "given": "Xiaoyu"
                 },
                 {
-                    "family": "Cun-jun",
-                    "given": "Li"
+                    "family": "Li",
+                    "given": "Cunjun"
                 },
                 {
                     "family": "Chao",
@@ -1207,7 +1391,7 @@
                 }
             ],
             "container-title": "National Remote Sensing Bulletin",
-            "id": "Liang-yun2006a",
+            "id": "Liu2006",
             "issue": "2",
             "issued": {
                 "date-parts": [
@@ -1415,6 +1599,67 @@
             "publisher-place": "Singapore",
             "title": "Remote Sensing Image Fusion Based on PCA and Wavelets",
             "type": "paper-conference"
+        },
+        {
+            "URL": "https://www.deepblock.net/blog/sar-imagery-analysis-challenges",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        13
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Moon",
+                    "given": "Gwihwan"
+                }
+            ],
+            "id": "Moon2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        3
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "How AI can help overcome SAR imagery analysis challenges.",
+            "type": ""
+        },
+        {
+            "URL": "https://earthobservatory.nasa.gov/images/147098/scientists-map-beirut-blast-damage",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        13
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "NASA"
+                }
+            ],
+            "genre": "Text.{{Article}}",
+            "id": "NASA2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        8
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "publisher": "NASA Earth Observatory",
+            "title": "Scientists Map Beirut Blast Damage",
+            "type": ""
         },
         {
             "URL": "https://comptroller.nyc.gov/services/for-the-public/nyc-climate-dashboard/emissions/",
@@ -1631,6 +1876,31 @@
             "type": "paper-conference"
         },
         {
+            "URL": "https://www.sandia.gov/radar/pathfinder-radar-isr-and-synthetic-aperture-radar-sar-systems/what-is-sar/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        13
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "Sandia National Laboratories"
+                }
+            ],
+            "container-title": "Pathfinder Radar ISR & SAR Systems",
+            "id": "SandiaNationalLaboratoriesn/d",
+            "issued": {
+                "date-parts": []
+            },
+            "language": "en-US",
+            "title": "What is Synthetic Aperture Radar (SAR)?",
+            "type": ""
+        },
+        {
             "URL": "https://learnopencv.com/support-vector-machines-svm/",
             "accessed": {
                 "date-parts": [
@@ -1658,6 +1928,35 @@
             "language": "en-US",
             "title": "Support Vector Machines (SVM)  LearnOpenCV #",
             "type": ""
+        },
+        {
+            "ISBN": "978-0-429-14298-7",
+            "author": [
+                {
+                    "family": "Schuler",
+                    "given": "Dale L."
+                },
+                {
+                    "family": "Lee",
+                    "given": "Jong-Sen"
+                },
+                {
+                    "family": "Kasilingam",
+                    "given": "Dayalan"
+                }
+            ],
+            "container-title": "Image Processing for Remote Sensing",
+            "id": "Schuler2007",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "publisher": "CRC Press",
+            "title": "Polarimetric SAR Techniques for Remote Sensing of the Ocean Surface",
+            "type": "chapter"
         },
         {
             "DOI": "10.2166/hydro.2023.137",
@@ -1701,6 +2000,38 @@
             "title": "Quality monitoring of inland water bodies using Google Earth Engine",
             "type": "article-journal",
             "volume": "25"
+        },
+        {
+            "URL": "https://www.capellaspace.com/the-key-benefits-a-sar-constellation-can-bring-to-earth-observation/",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        13
+                    ]
+                ]
+            },
+            "annote": "titleTranslation:",
+            "author": [
+                {
+                    "family": "Soenen",
+                    "given": "Scott"
+                }
+            ],
+            "container-title": "Capella Space",
+            "id": "Soenen2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        7
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "title": "The key benefits a SAR constellation can bring to Earth observation",
+            "type": ""
         },
         {
             "DOI": "10.1117/12.2679783",
@@ -1889,6 +2220,33 @@
             "type": ""
         },
         {
+            "URL": "https://unhabitat.org/beirut-port-explosions-response-beirut-municipality-rapid-building-level-damage-assessment",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        13
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "literal": "UN-Habitat"
+                }
+            ],
+            "id": "UN-Habitat2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "title": "BEIRUT PORT EXPLOSIONS RESPONSE - Beirut Municipality Rapid Building-Level Damage Assessment  UN-Habitat",
+            "type": ""
+        },
+        {
             "DOI": "10.22214/ijraset.2023.54049",
             "ISSN": "23219653",
             "URL": "https://www.ijraset.com/best-journal/remote-sensing-image-classification-using-machine-learning-algorithm",
@@ -2067,6 +2425,56 @@
             "title": "A DATA FIELD METHOD FOR URBAN REMOTELY SENSED IMAGERY CLASSIFICATION CONSIDERING SPATIAL CORRELATION",
             "type": "article-journal",
             "volume": "XLI-B7"
+        },
+        {
+            "DOI": "10.12000/JR16124",
+            "ISSN": "2095-283X",
+            "URL": "https://radars.ac.cn/cn/article/doi/10.12000/JR16124",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        13
+                    ]
+                ]
+            },
+            "annote": "titleTranslation:",
+            "author": [
+                {
+                    "family": "Zhang",
+                    "given": "Jie"
+                },
+                {
+                    "family": "Zhang",
+                    "given": "Xi"
+                },
+                {
+                    "family": "Fan",
+                    "given": "Chenqing"
+                },
+                {
+                    "family": "Meng",
+                    "given": "Junmin"
+                }
+            ],
+            "container-title": "Journal of Radars",
+            "id": "Zhang2016b",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        12
+                    ]
+                ]
+            },
+            "language": "chinese",
+            "page": "596-606",
+            "publisher": "Journal of Radars",
+            "title": "Discussion on Application of Polarimetric Synthetic Aperture Radar in Marine Surveillance",
+            "type": "article-journal",
+            "volume": "5"
         },
         {
             "DOI": "10.1109/EORSA.2018.8598605",
