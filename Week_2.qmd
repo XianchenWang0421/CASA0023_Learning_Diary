@@ -2,6 +2,8 @@
 
 ## Presentation
 
+This is a short presentation on Landsat-8 using Quarto.
+
 ```{r echo=FALSE, warning=FALSE}
 library(htmltools)
 HTML('<iframe src="https://xianchenwang0421.github.io/CASA0023_Week2_Presentation/#/title-slide" width="700" height="600"></iframe>')
