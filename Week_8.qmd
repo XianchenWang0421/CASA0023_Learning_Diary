@@ -1,8 +1,8 @@
 # Week 8 - SAR in GEE
 
-What we are learning this week is Synthetic Aperture Radar (SAR), a new sensor. In the following, I will summarize the theoretical knowledge, application areas, advantages and challenges of SAR.
-
 ## Summary
+
+What we are learning this week is Synthetic Aperture Radar (SAR), a new sensor. In the following, I will summarize the theoretical knowledge, application areas, advantages and challenges of SAR.
 
 ### Overview
 
